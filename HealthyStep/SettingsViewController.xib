@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="HealthyStep" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="lGq-jq-doG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="SettingsViewController" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Via-gE-3cq">
+                    <rect key="frame" x="50" y="193" width="189" height="40"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
+                    <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your date of birth like dd/mm/yyyy" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-ar-X5m">
+                    <rect key="frame" x="60" y="243" width="294" height="40"/>
+                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pjc-AD-sUf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-4w-K5x">
+                    <rect key="frame" x="50" y="303" width="110" height="40"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
+                    <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your gender" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="exC-LT-mTk">
+                    <rect key="frame" x="60" y="353" width="294" height="40"/>
+                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="yBU-3E-1r5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-8R-0CZ">
+                    <rect key="frame" x="50" y="413" width="99" height="40"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
+                    <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your height in cm" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wm0-M4-ex0">
+                    <rect key="frame" x="60" y="463" width="294" height="40"/>
+                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="uka-Oj-z28"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO4-Kh-rTB">
+                    <rect key="frame" x="50" y="523" width="104" height="40"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
+                    <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your weight in kg" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-Fq-zWU">
+                    <rect key="frame" x="60" y="573" width="294" height="40"/>
+                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="qdM-Vf-cNb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhl-8K-4eH">
+                    <rect key="frame" x="100" y="643" width="214" height="65"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="42"/>
+                    <state key="normal" title="Let's Start!">
+                        <color key="titleColor" red="0.30980392156862746" green="0.50196078431372548" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="letsStartPressed:" destination="-1" eventType="touchUpInside" id="Odl-Ba-oLe"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-iu-t7G">
+                    <rect key="frame" x="105.5" y="84" width="203" height="69"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="55"/>
+                    <color key="textColor" red="0.21035016910000001" green="0.5" blue="0.40390966589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.8010596633" green="1" blue="0.94117265939999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="top" secondItem="RUL-Fq-zWU" secondAttribute="bottom" constant="30" id="0TM-hC-kcM"/>
+                <constraint firstItem="BO4-Kh-rTB" firstAttribute="top" secondItem="wm0-M4-ex0" secondAttribute="bottom" constant="20" id="89U-m5-0oi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wm0-M4-ex0" secondAttribute="trailing" constant="60" id="9YF-5H-6XS"/>
+                <constraint firstItem="SzW-ar-X5m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="9wf-nU-q3B"/>
+                <constraint firstItem="m3U-8R-0CZ" firstAttribute="top" secondItem="exC-LT-mTk" secondAttribute="bottom" constant="20" id="AOh-jE-Nxh"/>
+                <constraint firstItem="Via-gE-3cq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="D92-Y7-3FZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="exC-LT-mTk" secondAttribute="trailing" constant="60" id="Ftq-7k-0cT"/>
+                <constraint firstItem="bZf-iu-t7G" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GNG-Q9-hd9"/>
+                <constraint firstItem="wm0-M4-ex0" firstAttribute="top" secondItem="m3U-8R-0CZ" secondAttribute="bottom" constant="10" id="LxQ-mb-tQ6"/>
+                <constraint firstItem="exC-LT-mTk" firstAttribute="top" secondItem="ezm-4w-K5x" secondAttribute="bottom" constant="10" id="Lxr-eg-cjb"/>
+                <constraint firstItem="Via-gE-3cq" firstAttribute="top" secondItem="bZf-iu-t7G" secondAttribute="bottom" constant="40" id="NAg-wB-d5Y"/>
+                <constraint firstItem="wm0-M4-ex0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="S1c-s6-hNe"/>
+                <constraint firstItem="SzW-ar-X5m" firstAttribute="top" secondItem="Via-gE-3cq" secondAttribute="bottom" constant="10" id="SlR-62-xn7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RUL-Fq-zWU" secondAttribute="trailing" constant="60" id="UEp-5z-zoV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SzW-ar-X5m" secondAttribute="trailing" constant="60" id="VQX-PM-CPU"/>
+                <constraint firstItem="bZf-iu-t7G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="aps-Sb-tgX"/>
+                <constraint firstItem="m3U-8R-0CZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="ia6-gu-h3P"/>
+                <constraint firstItem="BO4-Kh-rTB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="loy-cT-sCC"/>
+                <constraint firstItem="ezm-4w-K5x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="lrr-EO-MBa"/>
+                <constraint firstItem="RUL-Fq-zWU" firstAttribute="top" secondItem="BO4-Kh-rTB" secondAttribute="bottom" constant="10" id="mPa-iU-Zz3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zhl-8K-4eH" secondAttribute="trailing" constant="100" id="obf-27-mln"/>
+                <constraint firstItem="exC-LT-mTk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="tNk-uG-XXH"/>
+                <constraint firstItem="ezm-4w-K5x" firstAttribute="top" secondItem="SzW-ar-X5m" secondAttribute="bottom" constant="20" id="vVa-Ld-ycZ"/>
+                <constraint firstItem="RUL-Fq-zWU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="vcB-pT-Aa7"/>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="yVl-EG-ZZp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="128"/>
+        </view>
+    </objects>
+</document>
