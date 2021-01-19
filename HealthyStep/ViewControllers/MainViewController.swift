@@ -8,12 +8,21 @@
 
 import UIKit
 import Firebase
+import CoreMotion
+
 
 class MainViewController: UIViewController {
 
+    let pedometer = CMPedometer()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pedometer.startUpdates(from: Date()) { (data, error) in
+            print(data)
+        }
     }
+    
     
     @IBAction func signOutAction(_ sender: Any) {
         do {
