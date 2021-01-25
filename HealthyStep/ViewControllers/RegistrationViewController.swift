@@ -19,6 +19,7 @@ class RegistrationViewController: UIViewController {
         let settingsPage = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
         register { (success) in
             if success {
+                settingsPage.modalPresentationStyle = .fullScreen
                 self.present(settingsPage, animated: true, completion: nil)
             }
         }
@@ -26,6 +27,7 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func logInAction(_ sender: Any) {
         let logInPage = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        logInPage.modalPresentationStyle = .fullScreen
         self.present(logInPage, animated: true, completion: nil)
     }
     

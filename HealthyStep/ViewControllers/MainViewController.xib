@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HealthyStep" customModuleProvider="target">
             <connections>
+                <outlet property="stepsLabel" destination="rNU-Du-S0D" id="Ny9-Bl-RpQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="d6y-7C-3sf"/>
             </connections>
         </placeholder>
@@ -31,24 +32,24 @@
                         <action selector="signOutAction:" destination="-1" eventType="touchUpInside" id="ofN-a0-SBZ"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="of8-wA-aYV">
-                    <rect key="frame" x="132" y="275" width="150" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0UD-AS-UA0">
-                    <rect key="frame" x="132" y="465" width="150" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-Du-S0D">
+                    <rect key="frame" x="130" y="344" width="154" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KaV-aZ-TXG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="45"/>
+                    <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.74660456180000001" green="1" blue="0.93725115059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="rNU-Du-S0D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="130" id="6KX-99-B0f"/>
                 <constraint firstItem="r3e-B7-jsn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BIw-sg-BBx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r3e-B7-jsn" secondAttribute="bottom" constant="50" id="GJ4-dW-QoR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" constant="130" id="RmJ-YG-fl9"/>
+                <constraint firstItem="rNU-Du-S0D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="300" id="hBQ-pj-3o7"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>

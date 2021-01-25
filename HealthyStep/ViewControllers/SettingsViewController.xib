@@ -46,7 +46,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhl-8K-4eH">
-                    <rect key="frame" x="49" y="694.5" width="314" height="65"/>
+                    <rect key="frame" x="0.0" y="694.5" width="414" height="65"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="42"/>
                     <state key="normal" title="Let's Start!">
                         <color key="titleColor" red="0.30980392156862746" green="0.50196078431372548" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,7 +74,7 @@
                         <constraint firstAttribute="height" constant="40" id="TkV-1o-Dwj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-ar-X5m">
                     <rect key="frame" x="60" y="311" width="294" height="40"/>
@@ -133,9 +133,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sh4-Ia-42K" secondAttribute="trailing" constant="60" id="HHz-zf-CJs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1l8-K4-bV1" secondAttribute="trailing" constant="60" id="IhO-u8-ogO"/>
                 <constraint firstItem="XLN-i3-zBP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="KJ8-nb-gmL"/>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="top" secondItem="N7G-Cd-0bh" secondAttribute="bottom" constant="15" id="PSQ-tX-kfG"/>
                 <constraint firstItem="SzW-ar-X5m" firstAttribute="top" secondItem="Via-gE-3cq" secondAttribute="bottom" constant="8" id="SlR-62-xn7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N7G-Cd-0bh" secondAttribute="trailing" constant="60" id="UF5-q7-3EP"/>
-                <constraint firstItem="zhl-8K-4eH" firstAttribute="top" secondItem="N7G-Cd-0bh" secondAttribute="bottom" constant="15" id="VJp-Y4-OIj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SzW-ar-X5m" secondAttribute="trailing" constant="60" id="VQX-PM-CPU"/>
                 <constraint firstItem="Via-gE-3cq" firstAttribute="top" secondItem="Sh4-Ia-42K" secondAttribute="bottom" constant="20" id="Xlq-Gv-Fh7"/>
                 <constraint firstItem="bZf-iu-t7G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="aps-Sb-tgX"/>
@@ -148,14 +148,14 @@
                 <constraint firstItem="BO4-Kh-rTB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="loy-cT-sCC"/>
                 <constraint firstItem="ezm-4w-K5x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="lrr-EO-MBa"/>
                 <constraint firstItem="XLN-i3-zBP" firstAttribute="top" secondItem="ezm-4w-K5x" secondAttribute="bottom" constant="10" id="o8f-Ac-1zW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zhl-8K-4eH" secondAttribute="trailing" constant="51" id="obf-27-mln"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zhl-8K-4eH" secondAttribute="trailing" id="obf-27-mln"/>
                 <constraint firstItem="PZ0-YS-SnK" firstAttribute="top" secondItem="BO4-Kh-rTB" secondAttribute="bottom" constant="10" id="pXd-za-CdN"/>
                 <constraint firstItem="BO4-Kh-rTB" firstAttribute="top" secondItem="1l8-K4-bV1" secondAttribute="bottom" constant="15" id="pge-y4-mAa"/>
                 <constraint firstItem="pOP-Hw-TRm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="phc-yQ-seu"/>
                 <constraint firstItem="N7G-Cd-0bh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="swM-oT-K5C"/>
                 <constraint firstItem="Sh4-Ia-42K" firstAttribute="top" secondItem="vbI-Lf-wt4" secondAttribute="bottom" constant="10" id="tn7-ug-vXH"/>
                 <constraint firstItem="ezm-4w-K5x" firstAttribute="top" secondItem="SzW-ar-X5m" secondAttribute="bottom" constant="10" id="vVa-Ld-ycZ"/>
-                <constraint firstItem="zhl-8K-4eH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="yVl-EG-ZZp"/>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yVl-EG-ZZp"/>
                 <constraint firstItem="1l8-K4-bV1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="ylo-TQ-bSR"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>

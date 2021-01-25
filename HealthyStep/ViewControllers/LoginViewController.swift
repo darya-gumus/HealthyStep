@@ -18,18 +18,29 @@ class LoginViewController: UIViewController {
         let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
         entrance { (success) in
             if success {
+                mainPage.modalPresentationStyle = .fullScreen
                 self.present(mainPage, animated: true, completion: nil)
             }
         }
     }
  
     @IBAction func forgotPassAction(_ sender: Any) {
-        
+        Auth.auth().sendPasswordReset(withEmail: emailField.text!) { error in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: "Please, enter your email!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            let alert = UIAlertController(title: "Hurray", message: "A password reset email has been sent!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
     @IBAction func signUpAction(_ sender: Any) {
         let signUpPage = RegistrationViewController(nibName: "RegistrationViewController", bundle: nil)
+        signUpPage.modalPresentationStyle = .fullScreen
         self.present(signUpPage, animated: true, completion: nil)
     }
     
@@ -37,11 +48,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "Error", message: "Please, fill in all fields", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
     
     func entrance(completionHandler: @escaping (Bool)-> Void) {
         let email = emailField.text!
@@ -56,7 +62,9 @@ class LoginViewController: UIViewController {
               }
             }
         } else {
-            showAlert()
+            let alert = UIAlertController(title: "Error", message: "Please, fill in all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
         

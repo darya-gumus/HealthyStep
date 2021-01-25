@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func letsStartPressed(_ sender: Any) {
         let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
+        mainPage.modalPresentationStyle = .fullScreen
         self.present(mainPage, animated: true, completion: nil)
     }
     
@@ -50,7 +51,7 @@ class SettingsViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        dateFormatter.dateFormat = "dd. MM. yyyy"
+        dateFormatter.dateFormat = "dd.mm.yyyy"
         
         self.birthDate.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)

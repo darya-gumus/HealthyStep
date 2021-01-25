@@ -10,6 +10,7 @@ target 'HealthyStep' do
 
 # add the Firebase pod for Google Analytics
 pod 'Firebase/Analytics'
+pod 'Firebase/Crashlytics'
 
 pod 'Firebase/Auth'
 pod 'Firebase/Database'

@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKi-Zw-JMc">
-                    <rect key="frame" x="50" y="200" width="97" height="40"/>
+                    <rect key="frame" x="50" y="164" width="97" height="40"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="32"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuT-3e-0hL">
-                    <rect key="frame" x="50" y="330" width="134" height="40"/>
+                    <rect key="frame" x="50" y="294" width="134" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="AKJ-vF-rFp"/>
                     </constraints>
@@ -36,25 +36,25 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your e-mail" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qy8-TD-4rs">
-                    <rect key="frame" x="60" y="260" width="294" height="40"/>
+                    <rect key="frame" x="60" y="224" width="294" height="40"/>
                     <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="wBM-hd-k3N"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LSC-PT-fVm">
-                    <rect key="frame" x="60" y="390" width="294" height="40"/>
+                    <rect key="frame" x="60" y="354" width="294" height="40"/>
                     <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="RgH-C3-No5"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-OR-d9K">
-                    <rect key="frame" x="264" y="647" width="105" height="47"/>
+                    <rect key="frame" x="264" y="611" width="105" height="47"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
                     <state key="normal" title="Sing Up">
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -64,7 +64,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2Q-FN-U0Y">
-                    <rect key="frame" x="125" y="475" width="164" height="65"/>
+                    <rect key="frame" x="0.0" y="439" width="414" height="65"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="42"/>
                     <state key="normal" title="Log In">
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,7 +74,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gi-GD-cH9">
-                    <rect key="frame" x="45" y="560" width="324" height="47"/>
+                    <rect key="frame" x="0.0" y="524" width="414" height="47"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
                     <state key="normal" title="Forgot your password ?">
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -85,17 +85,17 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.8010596633" green="1" blue="0.94117265939999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.74660456180000001" green="1" blue="0.93725115059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="H2Q-FN-U0Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="125" id="0Pc-Oa-tjI"/>
-                <constraint firstItem="JKi-Zw-JMc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="156" id="4lZ-BJ-uua"/>
+                <constraint firstItem="H2Q-FN-U0Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0Pc-Oa-tjI"/>
+                <constraint firstItem="JKi-Zw-JMc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="4lZ-BJ-uua"/>
                 <constraint firstItem="H2Q-FN-U0Y" firstAttribute="top" secondItem="LSC-PT-fVm" secondAttribute="bottom" constant="45" id="5Ih-2H-0SF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Gi-GD-cH9" secondAttribute="trailing" constant="45" id="ACA-Ut-D8S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Gi-GD-cH9" secondAttribute="trailing" id="ACA-Ut-D8S"/>
                 <constraint firstItem="CuT-3e-0hL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="ANL-S4-PCr"/>
                 <constraint firstItem="Qy8-TD-4rs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="J1b-Th-c7d"/>
                 <constraint firstItem="LSC-PT-fVm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="KdK-Z3-lXN"/>
                 <constraint firstItem="CuT-3e-0hL" firstAttribute="top" secondItem="Qy8-TD-4rs" secondAttribute="bottom" constant="30" id="RSH-nZ-T7a"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H2Q-FN-U0Y" secondAttribute="trailing" constant="125" id="TIg-5b-SNh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H2Q-FN-U0Y" secondAttribute="trailing" id="TIg-5b-SNh"/>
                 <constraint firstItem="pIL-OR-d9K" firstAttribute="top" secondItem="4Gi-GD-cH9" secondAttribute="bottom" constant="40" id="TWa-gv-bQF"/>
                 <constraint firstItem="4Gi-GD-cH9" firstAttribute="top" secondItem="H2Q-FN-U0Y" secondAttribute="bottom" constant="20" id="ZL0-fn-X8h"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pIL-OR-d9K" secondAttribute="trailing" constant="45" id="aFc-jJ-zvg"/>
@@ -103,7 +103,7 @@
                 <constraint firstItem="Qy8-TD-4rs" firstAttribute="top" secondItem="JKi-Zw-JMc" secondAttribute="bottom" constant="20" id="fwH-j3-nJ9"/>
                 <constraint firstItem="LSC-PT-fVm" firstAttribute="top" secondItem="CuT-3e-0hL" secondAttribute="bottom" constant="20" id="s4F-wD-Wfg"/>
                 <constraint firstItem="JKi-Zw-JMc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="vyC-hb-iaf"/>
-                <constraint firstItem="4Gi-GD-cH9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="45" id="xka-Ym-UdS"/>
+                <constraint firstItem="4Gi-GD-cH9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xka-Ym-UdS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LSC-PT-fVm" secondAttribute="trailing" constant="60" id="yc5-ay-0JF"/>
             </constraints>
             <point key="canvasLocation" x="139" y="128"/>
