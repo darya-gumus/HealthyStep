@@ -3,4 +3,99 @@
    uuid = "06762127-5EA6-4AB2-99CB-13EA36104E14"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FE84898-13F7-4D08-8F1F-17A23369EAAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HealthyStep/ViewControllers/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3FE84898-13F7-4D08-8F1F-17A23369EAAD - 54d4711f4c46838b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthyStep.MainViewController.__deallocating_deinit"
+                  moduleName = "HealthyStep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darya_gumus/Documents/HealthyStep/HealthyStep/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3FE84898-13F7-4D08-8F1F-17A23369EAAD - f225cf8aa198e0af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthyStep.MainViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; HealthyStep.MainViewController"
+                  moduleName = "HealthyStep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darya_gumus/Documents/HealthyStep/HealthyStep/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "3FE84898-13F7-4D08-8F1F-17A23369EAAD - 3dca3879205408ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthyStep.MainViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; HealthyStep.MainViewController"
+                  moduleName = "HealthyStep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darya_gumus/Documents/HealthyStep/HealthyStep/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "282">
+               </Location>
+               <Location
+                  uuid = "3FE84898-13F7-4D08-8F1F-17A23369EAAD - 2abe2a82e5b9f3d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthyStep.MainViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HealthyStep.MainViewController&gt;"
+                  moduleName = "HealthyStep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darya_gumus/Documents/HealthyStep/HealthyStep/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "3FE84898-13F7-4D08-8F1F-17A23369EAAD - 2609728e702620a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HealthyStep.MainViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HealthyStep.MainViewController&gt;"
+                  moduleName = "HealthyStep"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/darya_gumus/Documents/HealthyStep/HealthyStep/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

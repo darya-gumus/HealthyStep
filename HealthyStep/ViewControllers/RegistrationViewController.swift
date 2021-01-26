@@ -16,11 +16,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var repeatPasswordField: UITextField!
     
     @IBAction func singUpAction(_ sender: Any) {
-        let settingsPage = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
         register { (success) in
             if success {
-                settingsPage.modalPresentationStyle = .fullScreen
-                self.present(settingsPage, animated: true, completion: nil)
+                mainPage.modalPresentationStyle = .fullScreen
+                self.present(mainPage, animated: true, completion: nil)
             }
         }
     }

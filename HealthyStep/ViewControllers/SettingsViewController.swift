@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var birthDate: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var birthDateTF: UITextField!
+    @IBOutlet weak var genderPicker: UISegmentedControl!
+    @IBOutlet weak var heightTF: UITextField!
+    @IBOutlet weak var weightTF: UITextField!
+    
     let datePicker = UIDatePicker()
-    
-    @IBOutlet weak var heightLabel: UILabel!
-    
-    @IBOutlet weak var weightLabel: UILabel!
     
     @IBAction func letsStartPressed(_ sender: Any) {
         let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
@@ -43,26 +45,28 @@ class SettingsViewController: UIViewController {
     func createDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
-        birthDate.inputView = datePicker
-        birthDate.inputAccessoryView = createToolbar()
+        birthDateTF.inputView = datePicker
+        birthDateTF.inputAccessoryView = createToolbar()
     }
   
     @objc func doneButtonPressed() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        dateFormatter.dateFormat = "dd.mm.yyyy"
+        dateFormatter.dateFormat = "dd.MM.yyyy"
         
-        self.birthDate.text = dateFormatter.string(from: datePicker.date)
+        self.birthDateTF.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
     
-    @IBAction func heightSliderDidSlide(_ sender: UISlider){
-        let value: Int = Int(sender.value)
-        heightLabel.text = "\(value)"
-    }
-    @IBAction func weightSliderDidSlide(_ sender: UISlider){
-        let value = ((sender.value)*10).rounded()/10
-        weightLabel.text = "\(value)"
-    }
+//        let value = ((sender.value)*10).rounded()/10
+        
+        @IBAction func signOutAction(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+        }
 }

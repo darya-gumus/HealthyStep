@@ -80,12 +80,12 @@
 				924DB3A425B962FB004034B5 /* FirstPageViewController.xib */,
 				92F05298258E087B00EC476F /* RegistrationViewController.swift */,
 				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
-				9299D80425921FE9000251AD /* SettingsViewController.swift */,
-				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 				92F0529C258E4E0400EC476F /* LoginViewController.swift */,
 				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
 				9299D80925923E15000251AD /* MainViewController.xib */,
+				9299D80425921FE9000251AD /* SettingsViewController.swift */,
+				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
