@@ -35,12 +35,6 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func showAlert() {
-        let alert = UIAlertController(title: "Error", message: "Please, fill in all fields", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
     func register(completionHandler: @escaping (Bool)-> Void) {
         let email = emailField.text!
         let password = passwordField.text!
@@ -56,7 +50,9 @@ class RegistrationViewController: UIViewController {
                 }
             }
         } else {
-            showAlert()
+            let alert = UIAlertController(title: "Error", message: "Please, fill in all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
 }

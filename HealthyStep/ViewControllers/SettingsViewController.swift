@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func letsStartPressed(_ sender: Any) {
         let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
+        
         mainPage.modalPresentationStyle = .fullScreen
         self.present(mainPage, animated: true, completion: nil)
     }
@@ -59,8 +60,6 @@ class SettingsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-//        let value = ((sender.value)*10).rounded()/10
-        
         @IBAction func signOutAction(_ sender: Any) {
         let firebaseAuth = Auth.auth()
             do {
@@ -69,4 +68,8 @@ class SettingsViewController: UIViewController {
                 print ("Error signing out: %@", signOutError)
             }
         }
+    
+//        let value = ((sender.value)*10).rounded()/10
+
+
 }

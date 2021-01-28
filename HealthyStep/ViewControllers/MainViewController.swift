@@ -83,13 +83,10 @@ class MainViewController: UIViewController {
                 DispatchQueue.main.async { [weak self] in
                     if let activiry = data {
                         if activiry.running == true {
-                            print("Running")
                             self?.activityLabel.text = "Running"
                         } else if activiry.walking == true {
-                            print("Walking")
                             self?.activityLabel.text = "Walking"
                         } else if activiry.stationary == true {
-                            print("Stationary")
                             self?.activityLabel.text = "Stationary"
                         }
                     }
@@ -104,11 +101,9 @@ class MainViewController: UIViewController {
                 if error == nil {
                     if let data = pedometerData {
                         DispatchQueue.main.async { [weak self] in
-                            print("Number of Steps - \(data.numberOfSteps)")
                             self?.stepsCountLabel.text = "\(data.numberOfSteps)"
                         }
                     } else {
-                        print("Steps are not avalible")
                         self.stepsCountLabel.text = "Steps are not avalible"
                     }
                 }
