@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HealthyStep" customModuleProvider="target">
             <connections>
                 <outlet property="activityLabel" destination="TaH-XS-8Ql" id="8fN-Bj-deD"/>
-                <outlet property="settingsButton" destination="3NP-6R-ycE" id="oPS-yi-ei7"/>
                 <outlet property="startStopButton" destination="syc-U0-RZn" id="nKI-oN-5zg"/>
                 <outlet property="stepsCountLabel" destination="rNU-Du-S0D" id="rA6-kh-fZv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="d6y-7C-3sf"/>
@@ -22,53 +22,55 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NP-6R-ycE">
-                    <rect key="frame" x="217" y="40" width="73" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="Settings">
-                        <color key="titleColor" red="0.021408163010000002" green="0.5251494646" blue="0.53726124760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </state>
-                    <connections>
-                        <action selector="goToSettingsButton:" destination="-1" eventType="touchUpInside" id="dYH-wY-ZXu"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaH-XS-8Ql">
-                    <rect key="frame" x="0.0" y="226" width="320" height="37.5"/>
+                    <rect key="frame" x="0.0" y="110" width="320" height="37.5"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-Du-S0D">
-                    <rect key="frame" x="0.0" y="313.5" width="320" height="37.5"/>
+                    <rect key="frame" x="0.0" y="237.5" width="320" height="37.5"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syc-U0-RZn">
-                    <rect key="frame" x="0.0" y="466" width="320" height="62"/>
+                    <rect key="frame" x="0.0" y="363" width="320" height="62"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="40"/>
                     <state key="normal" title="Start">
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIO-Vz-5jm">
+                    <rect key="frame" x="265" y="50" width="25" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal">
+                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="goToSettingsButton:" destination="-1" eventType="touchUpInside" id="2bq-pG-d9R"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.74660456180000001" green="1" blue="0.93725115059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3NP-6R-ycE" secondAttribute="trailing" constant="30" id="3yd-wD-54V"/>
+                <constraint firstItem="rNU-Du-S0D" firstAttribute="top" secondItem="TaH-XS-8Ql" secondAttribute="bottom" constant="90" id="2fh-iX-Pbt"/>
+                <constraint firstItem="qIO-Vz-5jm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Hh3-se-sP0"/>
                 <constraint firstItem="TaH-XS-8Ql" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ibi-1P-GCt"/>
-                <constraint firstItem="3NP-6R-ycE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Irg-Fk-txC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qIO-Vz-5jm" secondAttribute="trailing" constant="30" id="PLZ-EB-sbe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TaH-XS-8Ql" secondAttribute="trailing" id="TtN-a4-bth"/>
+                <constraint firstItem="TaH-XS-8Ql" firstAttribute="top" secondItem="qIO-Vz-5jm" secondAttribute="bottom" constant="35" id="X6U-8Q-bKm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" id="Z2f-WB-9Dg"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" id="f43-aD-NzD"/>
                 <constraint firstItem="rNU-Du-S0D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hHs-oN-Mwa"/>
-                <constraint firstItem="TaH-XS-8Ql" firstAttribute="top" secondItem="3NP-6R-ycE" secondAttribute="bottom" constant="150" id="hWj-Kc-ynJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="syc-U0-RZn" secondAttribute="bottom" constant="40" id="r2S-oe-goR"/>
+                <constraint firstItem="syc-U0-RZn" firstAttribute="top" secondItem="rNU-Du-S0D" secondAttribute="bottom" constant="88" id="okl-wI-fOR"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="leading" secondItem="rNU-Du-S0D" secondAttribute="leading" id="xB7-jw-7mr"/>
-                <constraint firstItem="syc-U0-RZn" firstAttribute="top" secondItem="rNU-Du-S0D" secondAttribute="bottom" priority="999" constant="115" id="yfj-zr-2hb"/>
-                <constraint firstItem="rNU-Du-S0D" firstAttribute="top" secondItem="TaH-XS-8Ql" secondAttribute="bottom" constant="50" id="yha-oY-MgS"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
     </objects>
+    <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

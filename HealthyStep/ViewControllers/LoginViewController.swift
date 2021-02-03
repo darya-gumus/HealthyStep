@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func logInAction(_ sender: Any) {
+        
         let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
         entrance { (success) in
             if success {

@@ -13,12 +13,9 @@ import CoreMotion
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var settingsButton: UIButton!
-    
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var stepsCountLabel: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
-    
     
     let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
@@ -31,7 +28,8 @@ class MainViewController: UIViewController {
         
         startStopButton.addTarget(self, action: #selector(didTapStartStopButton), for: .touchUpInside)
     }
- 
+    
+    
     @objc private func didTapStartStopButton() {
            shouldStartUpdating = !shouldStartUpdating
            shouldStartUpdating ? (onStart()) : (onStop())
@@ -39,14 +37,15 @@ class MainViewController: UIViewController {
     
     func onStart() {
         startStopButton.setTitle("Stop", for: .normal)
-            startDate = Date()
-            startUpdating()
+        stepsCountLabel.text = "0"
+        startDate = Date()
+        startUpdating()
     }
 
     func onStop() {
         startStopButton.setTitle("Start", for: .normal)
-            startDate = nil
-            stopUpdating()
+        startDate = nil
+        stopUpdating()
     }
     
     func startUpdating() {
@@ -71,6 +70,7 @@ class MainViewController: UIViewController {
     }
     
 
+    
     @IBAction func goToSettingsButton(_ sender: Any) {
         let settingsPage = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
         settingsPage.modalPresentationStyle = .fullScreen
@@ -80,14 +80,14 @@ class MainViewController: UIViewController {
     func activityManagerFunc() {
         if CMMotionActivityManager.isActivityAvailable() {
             self.activityManager.startActivityUpdates(to: OperationQueue.main) { (data) in
-                DispatchQueue.main.async { [weak self] in
+                DispatchQueue.main.async {
                     if let activiry = data {
                         if activiry.running == true {
-                            self?.activityLabel.text = "Running"
+                            self.activityLabel.text = "Running"
                         } else if activiry.walking == true {
-                            self?.activityLabel.text = "Walking"
+                            self.activityLabel.text = "Walking"
                         } else if activiry.stationary == true {
-                            self?.activityLabel.text = "Stationary"
+                            self.activityLabel.text = "Stationary"
                         }
                     }
                 }
@@ -110,5 +110,7 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    
     
 }

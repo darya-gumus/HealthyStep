@@ -14,7 +14,6 @@ class FirstPageViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func logInPressed(_ sender: Any) {
         let logInPage = LoginViewController(nibName: "LoginViewController", bundle: nil)
         logInPage.modalPresentationStyle = .fullScreen

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87803597EB3F20FC46472B85392EC4FD"
-               BuildableName = "FirebaseInstallations.framework"
-               BlueprintName = "FirebaseInstallations"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "92DFD558258CBDBB0011DC97"
+               BuildableName = "HealthyStep.app"
+               BlueprintName = "HealthyStep"
+               ReferencedContainer = "container:HealthyStep.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,6 +40,22 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "92DFD558258CBDBB0011DC97"
+            BuildableName = "HealthyStep.app"
+            BlueprintName = "HealthyStep"
+            ReferencedContainer = "container:HealthyStep.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-FIRAnalyticsDebugEnabled"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +63,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "92DFD558258CBDBB0011DC97"
+            BuildableName = "HealthyStep.app"
+            BlueprintName = "HealthyStep"
+            ReferencedContainer = "container:HealthyStep.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

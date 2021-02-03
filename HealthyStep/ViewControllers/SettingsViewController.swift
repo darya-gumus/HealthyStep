@@ -9,6 +9,45 @@
 import UIKit
 import Firebase
 
+enum GenderType: String {
+    case male
+    case female
+}
+
+class UserModel: NSObject, NSCoding {
+    
+    let name: String
+    let birthDate: String
+    let gender: GenderType
+    let height: Int
+    let weight: Double
+    
+    init(name: String, birthDate: String, gender: GenderType, height: Int, weight: Double) {
+        self.name = name
+        self.birthDate = birthDate
+        self.gender = gender
+        self.height = height
+        self.weight = weight
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: "name")
+        coder.encode(birthDate, forKey: "birthDate")
+        coder.encode(gender.rawValue, forKey: "gender")
+        coder.encode(height, forKey: "height")
+        coder.encode(weight, forKey: "weight")
+    }
+    
+    required init?(coder: NSCoder) {
+        name = coder.decodeObject(forKey: "name") as? String ?? ""
+        birthDate = coder.decodeObject(forKey: "birthDate") as? String ?? ""
+        gender = coder.decodeObject(forKey: "gender") as? GenderType ?? GenderType.female
+        height = coder.decodeObject(forKey: "height") as? Int ?? 0
+        weight = coder.decodeObject(forKey: "weight") as? Double ?? 0.0
+    }
+    
+}
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var nameTF: UITextField!
@@ -20,8 +59,18 @@ class SettingsViewController: UIViewController {
     let datePicker = UIDatePicker()
     
     @IBAction func letsStartPressed(_ sender: Any) {
-        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
         
+        let name = nameTF.text!
+        let birthDate = birthDateTF.text!
+        let gender = genderPicker.selectedSegmentIndex
+        let height = heightTF.text!
+        let weight = weightTF.text!
+        
+//       let userObject = UserModel(name: name, birthDate: birthDate, gender: gender, height: height, weight: weight)
+        
+//        UserSettings.userModel = userObject
+        
+        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
         mainPage.modalPresentationStyle = .fullScreen
         self.present(mainPage, animated: true, completion: nil)
     }
@@ -32,15 +81,33 @@ class SettingsViewController: UIViewController {
     }
 
     func createToolbar() -> UIToolbar {
-        //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        //done button
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
         toolbar.setItems([doneButton], animated: true)
         
         return toolbar
+    }
+    
+    @objc func doneButtonPressed() {
+        let birthDate = datePicker.date
+        let todayDate = Date()
+        
+        if birthDate < todayDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+            self.birthDateTF.text = dateFormatter.string(from: datePicker.date)
+            self.view.endEditing(true)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Please, select correct date!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     func createDatePicker() {
@@ -50,17 +117,9 @@ class SettingsViewController: UIViewController {
         birthDateTF.inputAccessoryView = createToolbar()
     }
   
-    @objc func doneButtonPressed() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        dateFormatter.dateFormat = "dd.MM.yyyy"
-        
-        self.birthDateTF.text = dateFormatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
+   
     
-        @IBAction func signOutAction(_ sender: Any) {
+    @IBAction func signOutAction(_ sender: Any) {
         let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
@@ -68,8 +127,5 @@ class SettingsViewController: UIViewController {
                 print ("Error signing out: %@", signOutError)
             }
         }
-    
-//        let value = ((sender.value)*10).rounded()/10
-
 
 }
