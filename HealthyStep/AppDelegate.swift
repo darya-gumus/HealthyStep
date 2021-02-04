@@ -18,12 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-       
         return true
-    }
-    func showModalAuth() {
-        let logInVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
-        self.window?.rootViewController?.present(logInVC, animated: false , completion: nil)
     }
 
     // MARK: UISceneSession Lifecycle

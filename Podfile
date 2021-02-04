@@ -9,11 +9,11 @@ target 'HealthyStep' do
 # https://firebase.google.com/docs/ios/setup#available-pods
 
 # add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
+
 pod 'Firebase/Crashlytics'
 
 pod 'Firebase/Auth'
-pod 'Firebase/Database'
+
 
   # Pods for HealthyStep
 
