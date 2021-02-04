@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 //        FirebaseApp.configure()
         
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = SettingsViewController()
         window?.makeKeyAndVisible()
         
     }

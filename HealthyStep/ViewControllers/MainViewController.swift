@@ -49,17 +49,41 @@ class MainViewController: UIViewController {
     }
     
     func startUpdating() {
-            if CMMotionActivityManager.isActivityAvailable() {
-                activityManagerFunc()
-            } else {
-                activityLabel.text = "Activity Manager Not available"
+        if CMMotionActivityManager.isActivityAvailable() {
+            self.activityManager.startActivityUpdates(to: OperationQueue.main) { (data) in
+                DispatchQueue.main.async {
+                    if let activiry = data {
+                        if activiry.running == true {
+                            self.activityLabel.text = "Running"
+                        } else if activiry.walking == true {
+                            self.activityLabel.text = "Walking"
+                        } else if activiry.stationary == true {
+                            self.activityLabel.text = "Stationary"
+                        }
+                    }
+                }
             }
-
-            if CMPedometer.isStepCountingAvailable() {
-                stepCounterFunc()
-            } else {
-                stepsCountLabel.text = "Step Counter Not available"
+        } else {
+            activityLabel.text = "Activity Manager Not available"
+        }
+           
+        
+        if CMPedometer.isStepCountingAvailable() {
+            self.pedometer.startUpdates(from: Date()) { (pedometerData, error) in
+                if error == nil {
+                    if let data = pedometerData {
+                        DispatchQueue.main.async { [weak self] in
+                            self?.stepsCountLabel.text = "\(data.numberOfSteps)"
+                        }
+                    } else {
+                        self.stepsCountLabel.text = "Steps are not avalible"
+                    }
+                }
             }
+                
+        } else {
+            stepsCountLabel.text = "Step Counter Not available"
+        }
     }
 
 
@@ -76,41 +100,6 @@ class MainViewController: UIViewController {
         settingsPage.modalPresentationStyle = .fullScreen
         self.present(settingsPage, animated: true, completion: nil)
     }
-    
-    func activityManagerFunc() {
-        if CMMotionActivityManager.isActivityAvailable() {
-            self.activityManager.startActivityUpdates(to: OperationQueue.main) { (data) in
-                DispatchQueue.main.async {
-                    if let activiry = data {
-                        if activiry.running == true {
-                            self.activityLabel.text = "Running"
-                        } else if activiry.walking == true {
-                            self.activityLabel.text = "Walking"
-                        } else if activiry.stationary == true {
-                            self.activityLabel.text = "Stationary"
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func stepCounterFunc() {
-        if CMPedometer.isStepCountingAvailable() {
-            self.pedometer.startUpdates(from: Date()) { (pedometerData, error) in
-                if error == nil {
-                    if let data = pedometerData {
-                        DispatchQueue.main.async { [weak self] in
-                            self?.stepsCountLabel.text = "\(data.numberOfSteps)"
-                        }
-                    } else {
-                        self.stepsCountLabel.text = "Steps are not avalible"
-                    }
-                }
-            }
-        }
-    }
-    
     
     
 }

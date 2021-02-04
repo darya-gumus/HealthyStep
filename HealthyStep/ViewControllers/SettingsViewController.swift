@@ -9,45 +9,6 @@
 import UIKit
 import Firebase
 
-enum GenderType: String {
-    case male
-    case female
-}
-
-class UserModel: NSObject, NSCoding {
-    
-    let name: String
-    let birthDate: String
-    let gender: GenderType
-    let height: Int
-    let weight: Double
-    
-    init(name: String, birthDate: String, gender: GenderType, height: Int, weight: Double) {
-        self.name = name
-        self.birthDate = birthDate
-        self.gender = gender
-        self.height = height
-        self.weight = weight
-    }
-    
-    func encode(with coder: NSCoder) {
-        coder.encode(name, forKey: "name")
-        coder.encode(birthDate, forKey: "birthDate")
-        coder.encode(gender.rawValue, forKey: "gender")
-        coder.encode(height, forKey: "height")
-        coder.encode(weight, forKey: "weight")
-    }
-    
-    required init?(coder: NSCoder) {
-        name = coder.decodeObject(forKey: "name") as? String ?? ""
-        birthDate = coder.decodeObject(forKey: "birthDate") as? String ?? ""
-        gender = coder.decodeObject(forKey: "gender") as? GenderType ?? GenderType.female
-        height = coder.decodeObject(forKey: "height") as? Int ?? 0
-        weight = coder.decodeObject(forKey: "weight") as? Double ?? 0.0
-    }
-    
-}
-
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var nameTF: UITextField!
@@ -56,30 +17,46 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
     
+    let userDefaults = UserDefaults.standard
     let datePicker = UIDatePicker()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        createDatePicker()
+        
+        if let name = userDefaults.object(forKey: "name") {
+            nameTF.text = name as? String
+        }
+        if let birthDate = userDefaults.object(forKey: "birthDate") {
+            birthDateTF.text = birthDate as? String
+        }
+        if let gender = userDefaults.object(forKey: "gender") {
+            genderPicker.selectedSegmentIndex = gender as! Int
+        }
+        if let height = userDefaults.object(forKey: "height") {
+            heightTF.text = height as? String
+        }
+        if let weight = userDefaults.object(forKey: "weight") {
+            weightTF.text = weight as? String
+        }
+    }
     
     @IBAction func letsStartPressed(_ sender: Any) {
         
-        let name = nameTF.text!
-        let birthDate = birthDateTF.text!
-        let gender = genderPicker.selectedSegmentIndex
-        let height = heightTF.text!
-        let weight = weightTF.text!
+        userDefaults.setValue(nameTF.text, forKey: "name")
+        userDefaults.setValue(birthDateTF.text, forKey: "birthDate")
+        userDefaults.set(genderPicker.selectedSegmentIndex, forKey: "gender")
+        userDefaults.setValue(heightTF.text, forKey: "height")
+        userDefaults.setValue(weightTF.text, forKey: "weight")
         
-//       let userObject = UserModel(name: name, birthDate: birthDate, gender: gender, height: height, weight: weight)
-        
-//        UserSettings.userModel = userObject
         
         let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
         mainPage.modalPresentationStyle = .fullScreen
         self.present(mainPage, animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createDatePicker()
-    }
-
+    
     func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()

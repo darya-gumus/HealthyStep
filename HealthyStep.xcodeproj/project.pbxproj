@@ -10,7 +10,6 @@
 		06AAC70A599CEC542583D71C /* Pods_HealthyStep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */; };
 		924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DB3A325B962FB004034B5 /* FirstPageViewController.swift */; };
 		924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924DB3A425B962FB004034B5 /* FirstPageViewController.xib */; };
-		926BDED125CB09700054345A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED025CB096F0054345A /* UserSettings.swift */; };
 		926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED325CB16ED0054345A /* ReportsViewController.swift */; };
 		926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDED425CB16ED0054345A /* ReportsViewController.xib */; };
 		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
@@ -34,7 +33,6 @@
 		0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
 		924DB3A325B962FB004034B5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		924DB3A425B962FB004034B5 /* FirstPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageViewController.xib; sourceTree = "<group>"; };
-		926BDED025CB096F0054345A /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		926BDED325CB16ED0054345A /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		926BDED425CB16ED0054345A /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
 		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				9299D80825923E15000251AD /* MainViewController.swift */,
 				9299D80925923E15000251AD /* MainViewController.xib */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
-				926BDED025CB096F0054345A /* UserSettings.swift */,
 				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
 				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
@@ -288,7 +285,6 @@
 				926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */,
 				92F0529A258E087B00EC476F /* RegistrationViewController.swift in Sources */,
 				92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */,
-				926BDED125CB09700054345A /* UserSettings.swift in Sources */,
 				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
 				9299D810259247C7000251AD /* ViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
