@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,36 +40,21 @@
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIO-Vz-5jm">
-                    <rect key="frame" x="265" y="50" width="25" height="25"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal">
-                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
-                    </state>
-                    <connections>
-                        <action selector="goToSettingsButton:" destination="-1" eventType="touchUpInside" id="2bq-pG-d9R"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.74660456180000001" green="1" blue="0.93725115059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="rNU-Du-S0D" firstAttribute="top" secondItem="TaH-XS-8Ql" secondAttribute="bottom" constant="90" id="2fh-iX-Pbt"/>
-                <constraint firstItem="qIO-Vz-5jm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Hh3-se-sP0"/>
                 <constraint firstItem="TaH-XS-8Ql" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ibi-1P-GCt"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qIO-Vz-5jm" secondAttribute="trailing" constant="30" id="PLZ-EB-sbe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TaH-XS-8Ql" secondAttribute="trailing" id="TtN-a4-bth"/>
-                <constraint firstItem="TaH-XS-8Ql" firstAttribute="top" secondItem="qIO-Vz-5jm" secondAttribute="bottom" constant="35" id="X6U-8Q-bKm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" id="Z2f-WB-9Dg"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" id="f43-aD-NzD"/>
                 <constraint firstItem="rNU-Du-S0D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hHs-oN-Mwa"/>
+                <constraint firstItem="TaH-XS-8Ql" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="110" id="nlk-Ik-y2X"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="top" secondItem="rNU-Du-S0D" secondAttribute="bottom" constant="88" id="okl-wI-fOR"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="leading" secondItem="rNU-Du-S0D" secondAttribute="leading" id="xB7-jw-7mr"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
     </objects>
-    <resources>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-    </resources>
 </document>

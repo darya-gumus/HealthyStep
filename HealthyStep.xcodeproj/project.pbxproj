@@ -12,6 +12,7 @@
 		924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924DB3A425B962FB004034B5 /* FirstPageViewController.xib */; };
 		926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED325CB16ED0054345A /* ReportsViewController.swift */; };
 		926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDED425CB16ED0054345A /* ReportsViewController.xib */; };
+		926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDEF225CC19B40054345A /* TabBarViewController.swift */; };
 		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
 		9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80525921FE9000251AD /* SettingsViewController.xib */; };
 		9299D80A25923E15000251AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80825923E15000251AD /* MainViewController.swift */; };
@@ -35,6 +36,7 @@
 		924DB3A425B962FB004034B5 /* FirstPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageViewController.xib; sourceTree = "<group>"; };
 		926BDED325CB16ED0054345A /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		926BDED425CB16ED0054345A /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
+		926BDEF225CC19B40054345A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9299D80525921FE9000251AD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9299D80825923E15000251AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
 				92F0529C258E4E0400EC476F /* LoginViewController.swift */,
 				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
+				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
 				9299D80925923E15000251AD /* MainViewController.xib */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */,
 				9299D80A25923E15000251AD /* MainViewController.swift in Sources */,
 				92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */,
 				926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */,

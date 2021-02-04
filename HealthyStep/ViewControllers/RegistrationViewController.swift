@@ -16,7 +16,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var repeatPasswordField: UITextField!
     
     @IBAction func singUpAction(_ sender: Any) {
-        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
+        let mainPage = TabBarViewController()
         register { (success) in
             if success {
                 mainPage.modalPresentationStyle = .fullScreen

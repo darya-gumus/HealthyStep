@@ -24,7 +24,24 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         createDatePicker()
+        loadUserDefaults()
+    }
+    
+    @IBAction func letsStartPressed(_ sender: Any) {
         
+        userDefaults.setValue(nameTF.text, forKey: "name")
+        userDefaults.setValue(birthDateTF.text, forKey: "birthDate")
+        userDefaults.set(genderPicker.selectedSegmentIndex, forKey: "gender")
+        userDefaults.setValue(heightTF.text, forKey: "height")
+        userDefaults.setValue(weightTF.text, forKey: "weight")
+        
+        
+        let mainPage = TabBarViewController()
+        mainPage.modalPresentationStyle = .fullScreen
+        self.present(mainPage, animated: true, completion: nil)
+    }
+    
+    func loadUserDefaults() {
         if let name = userDefaults.object(forKey: "name") {
             nameTF.text = name as? String
         }
@@ -41,21 +58,6 @@ class SettingsViewController: UIViewController {
             weightTF.text = weight as? String
         }
     }
-    
-    @IBAction func letsStartPressed(_ sender: Any) {
-        
-        userDefaults.setValue(nameTF.text, forKey: "name")
-        userDefaults.setValue(birthDateTF.text, forKey: "birthDate")
-        userDefaults.set(genderPicker.selectedSegmentIndex, forKey: "gender")
-        userDefaults.setValue(heightTF.text, forKey: "height")
-        userDefaults.setValue(weightTF.text, forKey: "weight")
-        
-        
-        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
-        mainPage.modalPresentationStyle = .fullScreen
-        self.present(mainPage, animated: true, completion: nil)
-    }
-    
     
     func createToolbar() -> UIToolbar {
         let toolbar = UIToolbar()

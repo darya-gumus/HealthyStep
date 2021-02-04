@@ -15,8 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func logInAction(_ sender: Any) {
-        
-        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
+        let mainPage = TabBarViewController()
         entrance { (success) in
             if success {
                 mainPage.modalPresentationStyle = .fullScreen
@@ -38,7 +37,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
     @IBAction func signUpAction(_ sender: Any) {
         let signUpPage = RegistrationViewController(nibName: "RegistrationViewController", bundle: nil)
         signUpPage.modalPresentationStyle = .fullScreen
@@ -47,8 +45,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
     
+    }
     
     func entrance(completionHandler: @escaping (Bool)-> Void) {
         let email = emailField.text!
@@ -68,6 +66,6 @@ class LoginViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
-        
+    
 }
 

@@ -94,12 +94,4 @@ class MainViewController: UIViewController {
     }
     
 
-    
-    @IBAction func goToSettingsButton(_ sender: Any) {
-        let settingsPage = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
-        settingsPage.modalPresentationStyle = .fullScreen
-        self.present(settingsPage, animated: true, completion: nil)
-    }
-    
-    
 }
