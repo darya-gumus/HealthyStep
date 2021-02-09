@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06AAC70A599CEC542583D71C /* Pods_HealthyStep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */; };
+		45814611A8EBE662A1173D47 /* Pods_HealthyStep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */; };
 		924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DB3A325B962FB004034B5 /* FirstPageViewController.swift */; };
 		924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924DB3A425B962FB004034B5 /* FirstPageViewController.xib */; };
 		926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED325CB16ED0054345A /* ReportsViewController.swift */; };
@@ -30,7 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
+		5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyStep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		924DB3A325B962FB004034B5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		924DB3A425B962FB004034B5 /* FirstPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageViewController.xib; sourceTree = "<group>"; };
 		926BDED325CB16ED0054345A /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +53,7 @@
 		92F05299258E087B00EC476F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		92F0529C258E4E0400EC476F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		92F0529D258E4E0400EC476F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyStep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5D0E007E4A3EA6DC8D1ED1C /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
+		A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06AAC70A599CEC542583D71C /* Pods_HealthyStep.framework in Frameworks */,
+				45814611A8EBE662A1173D47 /* Pods_HealthyStep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +71,8 @@
 		7A16124E9685941A486BC021 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */,
-				F5D0E007E4A3EA6DC8D1ED1C /* Pods-HealthyStep.release.xcconfig */,
+				5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */,
+				A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -88,10 +88,10 @@
 				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
 				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
 				926BDF0B25CE8BA40054345A /* UserDefaultsSettings.swift */,
-				9299D80825923E15000251AD /* MainViewController.swift */,
 				9299D80925923E15000251AD /* MainViewController.xib */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
 				9299D80525921FE9000251AD /* SettingsViewController.xib */,
+				9299D80825923E15000251AD /* MainViewController.swift */,
 				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
 				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
 			);
@@ -104,7 +104,7 @@
 				92DFD55B258CBDBB0011DC97 /* HealthyStep */,
 				92DFD55A258CBDBB0011DC97 /* Products */,
 				7A16124E9685941A486BC021 /* Pods */,
-				E1470DEC9A7288B467C1E854 /* Frameworks */,
+				B02635DD70D0183CF4A3E3E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,10 +130,10 @@
 			path = HealthyStep;
 			sourceTree = "<group>";
 		};
-		E1470DEC9A7288B467C1E854 /* Frameworks */ = {
+		B02635DD70D0183CF4A3E3E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */,
+				7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,12 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92DFD56D258CBDBD0011DC97 /* Build configuration list for PBXNativeTarget "HealthyStep" */;
 			buildPhases = (
-				CFDADFD6833DD58DF0400CA0 /* [CP] Check Pods Manifest.lock */,
+				9263E681713E12BCE330C261 /* [CP] Check Pods Manifest.lock */,
 				92DFD555258CBDBB0011DC97 /* Sources */,
 				92DFD556258CBDBB0011DC97 /* Frameworks */,
 				92DFD557258CBDBB0011DC97 /* Resources */,
-				FF4B0D81C51435DEC9D35C08 /* [CP] Embed Pods Frameworks */,
 				924DB3AA25B96A5B004034B5 /* ShellScript */,
+				FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +231,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+			shellScript = "
+";
 		};
-		CFDADFD6833DD58DF0400CA0 /* [CP] Check Pods Manifest.lock */ = {
+		9263E681713E12BCE330C261 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,7 +256,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF4B0D81C51435DEC9D35C08 /* [CP] Embed Pods Frameworks */ = {
+		FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,7 +425,7 @@
 		};
 		92DFD56E258CBDBD0011DC97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */;
+			baseConfigurationReference = 5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -445,7 +446,7 @@
 		};
 		92DFD56F258CBDBD0011DC97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5D0E007E4A3EA6DC8D1ED1C /* Pods-HealthyStep.release.xcconfig */;
+			baseConfigurationReference = A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";

@@ -7,24 +7,32 @@
 //
 
 import UIKit
+import Firebase
 
 class ReportsViewController: UIViewController {
 
-    var tableView: UITableView! {
-        didSet {
-            tableView.dataSource = self
-            tableView.delegate = self
-        }
-    }
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return table
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.dataSource = self
+        tableView.delegate = self
         view.addSubview(tableView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        self.tableView.reloadData()
     }
 }
 
     extension ReportsViewController: UITableViewDataSource, UITableViewDelegate {
+       
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return 1
         }

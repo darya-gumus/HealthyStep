@@ -16,18 +16,18 @@ import UIKit
 //    static let keyWeight = "DzoEnHXu2W"
 //}
 
-class UserDefaultsSettings: UIViewController {
-    
-    let userDefaults = UserDefaults.standard
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setUserDefaults()
-        loadUserDefaults()
-    }
-    
-    func setUserDefaults() {
+//class UserDefaultsSettings: UIViewController {
+//
+//    let userDefaults = UserDefaults.standard
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        setUserDefaults()
+//        loadUserDefaults()
+//    }
+//
+//    func setUserDefaults() {
 //        let name = nameTF.text
 //        let birthDate = birthDateTF.text
 //        let gender = genderPicker.selectedSegmentIndex
@@ -39,9 +39,9 @@ class UserDefaultsSettings: UIViewController {
 //        userDefaults.set(gender, forKey: KeyDefaults.keyGender)
 //        userDefaults.setValue(height, forKey: KeyDefaults.keyHeight)
 //        userDefaults.setValue(weight, forKey: KeyDefaults.keyWeight)
-    }
-    
-    func loadUserDefaults() {
+//    }
+//
+//    func loadUserDefaults() {
 //        if let name = userDefaults.object(forKey: KeyDefaults.keyName) {
 //            nameTF.text = name as? String
 //        }
@@ -57,6 +57,6 @@ class UserDefaultsSettings: UIViewController {
 //        if let weight = userDefaults.object(forKey: KeyDefaults.keyWeight) {
 //            weightTF.text = weight as? String
 //        }
-    }
-    
-}
+//    }
+//
+//}

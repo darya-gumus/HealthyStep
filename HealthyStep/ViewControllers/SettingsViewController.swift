@@ -32,8 +32,6 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         createDatePicker()
-        
-        setUserDefaults()
         loadUserDefaults()
     }
     

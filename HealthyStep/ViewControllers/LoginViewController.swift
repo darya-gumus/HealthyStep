@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
  
     @IBAction func forgotPassAction(_ sender: Any) {
         Auth.auth().sendPasswordReset(withEmail: emailField.text!) { error in
-            if let error = error {
+            if let _ = error {
                 let alert = UIAlertController(title: "Error", message: "Please, enter your email!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)

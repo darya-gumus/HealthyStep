@@ -10,10 +10,8 @@ import UIKit
 import Firebase
 import CoreMotion
 
-
 class MainViewController: UIViewController {
     
-   
     @IBOutlet weak var timerCountLabel: UILabel!
     @IBOutlet weak var stepsCountLabel: UILabel!
     @IBOutlet weak var distanceCountLabel: UILabel!
@@ -23,18 +21,21 @@ class MainViewController: UIViewController {
     @IBOutlet weak var saveWorkoutButton: UIButton!
     
     let pedometer = CMPedometer()
-    var startDate: Date? = nil
     var shouldStartUpdating: Bool = false
     
-
-    var timer: Timer = Timer()
-    var count: Int = 0
+    var timer = Timer()
     var timerCounting: Bool = false
+    var count = 0
+    
+    var docRef: DocumentReference!
+    var workoutNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startStopButton.addTarget(self, action: #selector(didTapStartStopButton), for: .touchUpInside)
+        
+        docRef = Firestore.firestore().document("workoutData/\(workoutNum)")
     }
     
 
@@ -46,7 +47,6 @@ class MainViewController: UIViewController {
     func onStart() {
         startStopButton.setTitle("Stop", for: .normal)
         stepsCountLabel.text = "0"
-        startDate = Date()
         startUpdating()
         
         timerCounting = true
@@ -57,7 +57,6 @@ class MainViewController: UIViewController {
 
     func onStop() {
         startStopButton.setTitle("Start", for: .normal)
-        startDate = nil
         stopUpdating()
         
         timerCounting = false
@@ -110,4 +109,21 @@ class MainViewController: UIViewController {
         pedometer.stopEventUpdates()
     }
     
+    @IBAction func saveWorkoutTapped(_ sender: Any) {
+        let workoutDate = Date()
+        
+        let timerData = timerCountLabel.text
+        let stepsData = stepsCountLabel.text
+        let distanceData = distanceCountLabel.text
+        let kcalData = kcalCountLabel.text
+    
+        let dataToSave: [String: Any] = ["date": workoutDate, "timer": timerData, "steps": stepsData, "distance": distanceData, "kcal": kcalData]
+        docRef.setData(dataToSave) { (error) in
+            if let error = error {
+                print("Got an error: \(error.localizedDescription)")
+            } else {
+                print("Data has been saved!")
+            }
+        }
+    }
 }
