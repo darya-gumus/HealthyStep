@@ -10,9 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HealthyStep" customModuleProvider="target">
             <connections>
-                <outlet property="activityLabel" destination="TaH-XS-8Ql" id="8fN-Bj-deD"/>
-                <outlet property="startStopButton" destination="syc-U0-RZn" id="nKI-oN-5zg"/>
+                <outlet property="distanceCountLabel" destination="X0z-Fz-ZKC" id="Bko-Jp-Q9e"/>
+                <outlet property="kcalCountLabel" destination="1ET-RL-hGW" id="Rui-dC-ZOa"/>
+                <outlet property="saveWorkoutButton" destination="ekO-yY-moR" id="Cnv-Gv-6RU"/>
+                <outlet property="startStopButton" destination="syc-U0-RZn" id="Oge-Qz-Dn9"/>
                 <outlet property="stepsCountLabel" destination="rNU-Du-S0D" id="rA6-kh-fZv"/>
+                <outlet property="timerCountLabel" destination="PCU-rE-Joa" id="9hO-3K-sa7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="d6y-7C-3sf"/>
             </connections>
         </placeholder>
@@ -21,38 +24,66 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaH-XS-8Ql">
-                    <rect key="frame" x="0.0" y="154" width="375" height="37.333333333333343"/>
-                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
-                    <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-Du-S0D">
-                    <rect key="frame" x="0.0" y="281.33333333333331" width="375" height="37.333333333333314"/>
+                    <rect key="frame" x="0.0" y="246.33333333333334" width="375" height="37.333333333333343"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syc-U0-RZn">
-                    <rect key="frame" x="0.0" y="406.66666666666669" width="375" height="62"/>
+                    <rect key="frame" x="0.0" y="498.33333333333326" width="375" height="62"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="40"/>
                     <state key="normal" title="Start">
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-yY-moR">
+                    <rect key="frame" x="0.0" y="600.33333333333337" width="375" height="50"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
+                    <state key="normal" title="Save workout">
+                        <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-rE-Joa">
+                    <rect key="frame" x="0.0" y="169" width="375" height="37.333333333333343"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
+                    <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 km" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0z-Fz-ZKC">
+                    <rect key="frame" x="0.0" y="323.66666666666669" width="375" height="37.333333333333314"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
+                    <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 kcal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-RL-hGW">
+                    <rect key="frame" x="0.0" y="401" width="375" height="37.333333333333314"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
+                    <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.74660456180000001" green="1" blue="0.93725115059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="rNU-Du-S0D" firstAttribute="top" secondItem="TaH-XS-8Ql" secondAttribute="bottom" constant="90" id="2fh-iX-Pbt"/>
-                <constraint firstItem="TaH-XS-8Ql" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ibi-1P-GCt"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TaH-XS-8Ql" secondAttribute="trailing" id="TtN-a4-bth"/>
+                <constraint firstItem="PCU-rE-Joa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Zb-Zz-IBy"/>
+                <constraint firstItem="1ET-RL-hGW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3NI-ow-PYq"/>
+                <constraint firstItem="X0z-Fz-ZKC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3qq-Uo-gXa"/>
+                <constraint firstItem="ekO-yY-moR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Q5-Nu-kw3"/>
+                <constraint firstItem="PCU-rE-Joa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5pT-cv-VK5"/>
+                <constraint firstItem="rNU-Du-S0D" firstAttribute="top" secondItem="PCU-rE-Joa" secondAttribute="bottom" constant="40" id="KYm-vX-YTF"/>
+                <constraint firstItem="ekO-yY-moR" firstAttribute="top" secondItem="syc-U0-RZn" secondAttribute="bottom" constant="40" id="WZp-Pc-XLP"/>
+                <constraint firstItem="X0z-Fz-ZKC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Xo8-NU-cqB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" id="Z2f-WB-9Dg"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="trailing" secondItem="rNU-Du-S0D" secondAttribute="trailing" id="f43-aD-NzD"/>
                 <constraint firstItem="rNU-Du-S0D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hHs-oN-Mwa"/>
-                <constraint firstItem="TaH-XS-8Ql" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="110" id="nlk-Ik-y2X"/>
-                <constraint firstItem="syc-U0-RZn" firstAttribute="top" secondItem="rNU-Du-S0D" secondAttribute="bottom" constant="88" id="okl-wI-fOR"/>
+                <constraint firstItem="1ET-RL-hGW" firstAttribute="top" secondItem="X0z-Fz-ZKC" secondAttribute="bottom" constant="40" id="hkH-xk-Fgh"/>
+                <constraint firstItem="syc-U0-RZn" firstAttribute="top" secondItem="1ET-RL-hGW" secondAttribute="bottom" constant="60" id="mAF-HG-QOJ"/>
+                <constraint firstItem="X0z-Fz-ZKC" firstAttribute="top" secondItem="rNU-Du-S0D" secondAttribute="bottom" constant="40" id="qbk-Ty-f7D"/>
+                <constraint firstItem="1ET-RL-hGW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qjD-xX-nhV"/>
+                <constraint firstItem="ekO-yY-moR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ue2-fU-aoI"/>
                 <constraint firstItem="syc-U0-RZn" firstAttribute="leading" secondItem="rNU-Du-S0D" secondAttribute="leading" id="xB7-jw-7mr"/>
+                <constraint firstItem="PCU-rE-Joa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="125" id="xdH-p4-gn8"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>

@@ -9,6 +9,13 @@
 import UIKit
 import Firebase
 
+struct KeyDefaults {
+    static let keyName = "gujfGWPulI"
+    static let keyBirthDate = "e6C7RfgnHh"
+    static let keyGender = "Bxea38Zy8I"
+    static let keyHeight = "eebNQcLuW1"
+    static let keyWeight = "DzoEnHXu2W"
+}
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var nameTF: UITextField!
@@ -17,6 +24,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
     
+    
     let userDefaults = UserDefaults.standard
     let datePicker = UIDatePicker()
     
@@ -24,37 +32,48 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         createDatePicker()
+        
+        setUserDefaults()
         loadUserDefaults()
     }
     
     @IBAction func letsStartPressed(_ sender: Any) {
         
-        userDefaults.setValue(nameTF.text, forKey: "name")
-        userDefaults.setValue(birthDateTF.text, forKey: "birthDate")
-        userDefaults.set(genderPicker.selectedSegmentIndex, forKey: "gender")
-        userDefaults.setValue(heightTF.text, forKey: "height")
-        userDefaults.setValue(weightTF.text, forKey: "weight")
-        
+        setUserDefaults()
         
         let mainPage = TabBarViewController()
         mainPage.modalPresentationStyle = .fullScreen
         self.present(mainPage, animated: true, completion: nil)
     }
     
+    func setUserDefaults() {
+        let name = nameTF.text
+        let birthDate = birthDateTF.text
+        let gender = genderPicker.selectedSegmentIndex
+        let height = heightTF.text
+        let weight = weightTF.text
+        
+        userDefaults.setValue(name, forKey: KeyDefaults.keyName)
+        userDefaults.setValue(birthDate, forKey: KeyDefaults.keyBirthDate)
+        userDefaults.set(gender, forKey: KeyDefaults.keyGender)
+        userDefaults.setValue(height, forKey: KeyDefaults.keyHeight)
+        userDefaults.setValue(weight, forKey: KeyDefaults.keyWeight)
+    }
+    
     func loadUserDefaults() {
-        if let name = userDefaults.object(forKey: "name") {
+        if let name = userDefaults.object(forKey: KeyDefaults.keyName) {
             nameTF.text = name as? String
         }
-        if let birthDate = userDefaults.object(forKey: "birthDate") {
+        if let birthDate = userDefaults.object(forKey: KeyDefaults.keyBirthDate) {
             birthDateTF.text = birthDate as? String
         }
-        if let gender = userDefaults.object(forKey: "gender") {
+        if let gender = userDefaults.object(forKey: KeyDefaults.keyGender) {
             genderPicker.selectedSegmentIndex = gender as! Int
         }
-        if let height = userDefaults.object(forKey: "height") {
+        if let height = userDefaults.object(forKey: KeyDefaults.keyHeight) {
             heightTF.text = height as? String
         }
-        if let weight = userDefaults.object(forKey: "weight") {
+        if let weight = userDefaults.object(forKey: KeyDefaults.keyWeight) {
             weightTF.text = weight as? String
         }
     }

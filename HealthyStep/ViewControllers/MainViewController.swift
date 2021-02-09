@@ -13,23 +13,31 @@ import CoreMotion
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var activityLabel: UILabel!
+   
+    @IBOutlet weak var timerCountLabel: UILabel!
     @IBOutlet weak var stepsCountLabel: UILabel!
+    @IBOutlet weak var distanceCountLabel: UILabel!
+    @IBOutlet weak var kcalCountLabel: UILabel!
+    
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var saveWorkoutButton: UIButton!
     
-    let activityManager = CMMotionActivityManager()
     let pedometer = CMPedometer()
-    var shouldStartUpdating: Bool = false
     var startDate: Date? = nil
+    var shouldStartUpdating: Bool = false
     
-  
+
+    var timer: Timer = Timer()
+    var count: Int = 0
+    var timerCounting: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startStopButton.addTarget(self, action: #selector(didTapStartStopButton), for: .touchUpInside)
     }
     
-    
+
     @objc private func didTapStartStopButton() {
            shouldStartUpdating = !shouldStartUpdating
            shouldStartUpdating ? (onStart()) : (onStop())
@@ -40,34 +48,45 @@ class MainViewController: UIViewController {
         stepsCountLabel.text = "0"
         startDate = Date()
         startUpdating()
+        
+        timerCounting = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+        timerCountLabel.text = makeTimeString(hours: 0, minutes: 0, seconds: 0)
+        count = 0
     }
 
     func onStop() {
         startStopButton.setTitle("Start", for: .normal)
         startDate = nil
         stopUpdating()
+        
+        timerCounting = false
+        timer.invalidate()
+        
+    }
+    
+    @objc func timerCounter() {
+        count = count + 1
+        let time = secondsToHoursMinutesSeconds(seconds: count)
+        let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
+        timerCountLabel.text = timeString
+    }
+    
+    func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
+        return ((seconds / 3600), ((seconds % 3600) / 60), ((seconds % 3600) % 60))
+    }
+    
+    func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String {
+       var timeString = ""
+        timeString += String(format: "%02d", hours)
+        timeString += " : "
+        timeString += String(format: "%02d", minutes)
+        timeString += " : "
+        timeString += String(format: "%02d", seconds)
+        return timeString
     }
     
     func startUpdating() {
-        if CMMotionActivityManager.isActivityAvailable() {
-            self.activityManager.startActivityUpdates(to: OperationQueue.main) { (data) in
-                DispatchQueue.main.async {
-                    if let activiry = data {
-                        if activiry.running == true {
-                            self.activityLabel.text = "Running"
-                        } else if activiry.walking == true {
-                            self.activityLabel.text = "Walking"
-                        } else if activiry.stationary == true {
-                            self.activityLabel.text = "Stationary"
-                        }
-                    }
-                }
-            }
-        } else {
-            activityLabel.text = "Activity Manager Not available"
-        }
-           
-        
         if CMPedometer.isStepCountingAvailable() {
             self.pedometer.startUpdates(from: Date()) { (pedometerData, error) in
                 if error == nil {
@@ -86,12 +105,9 @@ class MainViewController: UIViewController {
         }
     }
 
-
     func stopUpdating() {
-            activityManager.stopActivityUpdates()
-            pedometer.stopUpdates()
-            pedometer.stopEventUpdates()
+        pedometer.stopUpdates()
+        pedometer.stopEventUpdates()
     }
     
-
 }
