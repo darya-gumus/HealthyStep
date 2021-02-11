@@ -28,17 +28,14 @@ class MainViewController: UIViewController {
     var count = 0
     
     var docRef: DocumentReference!
-    var workoutNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startStopButton.addTarget(self, action: #selector(didTapStartStopButton), for: .touchUpInside)
         
-        docRef = Firestore.firestore().document("workoutData/\(workoutNum)")
     }
     
-
     @objc private func didTapStartStopButton() {
            shouldStartUpdating = !shouldStartUpdating
            shouldStartUpdating ? (onStart()) : (onStop())
@@ -110,19 +107,26 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func saveWorkoutTapped(_ sender: Any) {
-        let workoutDate = Date()
         
+        let workoutDate = Date()
         let timerData = timerCountLabel.text
         let stepsData = stepsCountLabel.text
         let distanceData = distanceCountLabel.text
         let kcalData = kcalCountLabel.text
     
-        let dataToSave: [String: Any] = ["date": workoutDate, "timer": timerData, "steps": stepsData, "distance": distanceData, "kcal": kcalData]
-        docRef.setData(dataToSave) { (error) in
+        let dataToSave: [String: Any] = [
+            "date": workoutDate,
+            "timer": timerData,
+            "steps": stepsData,
+            "distance": distanceData,
+            "kcal": kcalData
+        ]
+        
+        docRef = Firestore.firestore().collection("workoutData").addDocument(data: dataToSave) { (error) in
             if let error = error {
                 print("Got an error: \(error.localizedDescription)")
             } else {
-                print("Data has been saved!")
+                print("WorkoutData has been saved!")
             }
         }
     }

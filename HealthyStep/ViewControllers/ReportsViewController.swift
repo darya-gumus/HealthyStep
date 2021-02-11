@@ -9,38 +9,54 @@
 import UIKit
 import Firebase
 
-class ReportsViewController: UIViewController {
 
+class ReportsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var loadedData : [String : [String: Any]] = [:]
+    
     let tableView: UITableView = {
-        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
+           let table = UITableView()
+           table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+           return table
+       }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
+        
+        loadDataFromFirestoreCloud()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        self.tableView.reloadData()
+    func loadDataFromFirestoreCloud() {
+        Firestore.firestore().collection("workoutData").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    self.loadedData = [document.documentID : document.data()]
+                }
+            }
+        }
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return loadedData.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = ""
+        return cell
+    }
+
 }
 
-    extension ReportsViewController: UITableViewDataSource, UITableViewDelegate {
-       
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 1
-        }
-    
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = ""
-            return cell
-        }
-    }
-
+  

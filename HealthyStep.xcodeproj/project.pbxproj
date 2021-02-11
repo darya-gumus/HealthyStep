@@ -88,10 +88,10 @@
 				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
 				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
 				926BDF0B25CE8BA40054345A /* UserDefaultsSettings.swift */,
-				9299D80925923E15000251AD /* MainViewController.xib */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
 				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
+				9299D80925923E15000251AD /* MainViewController.xib */,
 				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
 				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
 			);
