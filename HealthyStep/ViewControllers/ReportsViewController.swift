@@ -12,7 +12,7 @@ import Firebase
 
 class ReportsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var loadedData : [String : [String: Any]] = [:]
+    let firestoreManager = FirestoreManager()
     
     let tableView: UITableView = {
            let table = UITableView()
@@ -26,23 +26,11 @@ class ReportsViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.delegate = self
         view.addSubview(tableView)
         
-        loadDataFromFirestoreCloud()
+        firestoreManager.loadWorkoutData()
     }
     
-    func loadDataFromFirestoreCloud() {
-        Firestore.firestore().collection("workoutData").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    self.loadedData = [document.documentID : document.data()]
-                }
-            }
-        }
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return loadedData.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

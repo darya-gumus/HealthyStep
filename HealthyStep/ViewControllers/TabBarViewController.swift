@@ -23,7 +23,7 @@ class TabBarViewController: UIViewController {
         mainVC.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "star"), tag: 1)
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 2)
         
-        tabBarVC.viewControllers = [ mainVC, reportsVC, settingsVC]
+        tabBarVC.viewControllers = [ mainVC, reportsVC, settingsVC ]
         
         self.view.addSubview(tabBarVC.view)
     }

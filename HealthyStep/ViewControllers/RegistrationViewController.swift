@@ -43,7 +43,7 @@ class RegistrationViewController: UIViewController {
         if (!email.isEmpty && !password.isEmpty && !repeatPassword.isEmpty && password == repeatPassword) {
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             
-                if let result = result {
+                if let _ = result {
                     completionHandler(true)
                 } else {
                     completionHandler(false)

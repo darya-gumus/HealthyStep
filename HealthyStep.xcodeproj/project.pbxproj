@@ -13,7 +13,9 @@
 		926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED325CB16ED0054345A /* ReportsViewController.swift */; };
 		926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDED425CB16ED0054345A /* ReportsViewController.xib */; };
 		926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDEF225CC19B40054345A /* TabBarViewController.swift */; };
-		926BDF0C25CE8BA40054345A /* UserDefaultsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF0B25CE8BA40054345A /* UserDefaultsSettings.swift */; };
+		926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */; };
+		926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8125D6C62A0054345A /* MotionManager.swift */; };
+		926BDF8525D6D13F0054345A /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8425D6D13F0054345A /* FirestoreManager.swift */; };
 		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
 		9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80525921FE9000251AD /* SettingsViewController.xib */; };
 		9299D80A25923E15000251AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80825923E15000251AD /* MainViewController.swift */; };
@@ -37,7 +39,9 @@
 		926BDED325CB16ED0054345A /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		926BDED425CB16ED0054345A /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
 		926BDEF225CC19B40054345A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		926BDF0B25CE8BA40054345A /* UserDefaultsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettings.swift; sourceTree = "<group>"; };
+		926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
+		926BDF8125D6C62A0054345A /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		926BDF8425D6D13F0054345A /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9299D80525921FE9000251AD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9299D80825923E15000251AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -80,22 +84,39 @@
 		924DB34F25AC7F97004034B5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				926BDF8B25D7DD190054345A /* XIBs */,
 				924DB3A325B962FB004034B5 /* FirstPageViewController.swift */,
-				924DB3A425B962FB004034B5 /* FirstPageViewController.xib */,
 				92F05298258E087B00EC476F /* RegistrationViewController.swift */,
-				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
 				92F0529C258E4E0400EC476F /* LoginViewController.swift */,
-				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
 				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
-				926BDF0B25CE8BA40054345A /* UserDefaultsSettings.swift */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
-				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
-				9299D80925923E15000251AD /* MainViewController.xib */,
 				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
-				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		926BDF8A25D7DCFA0054345A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */,
+				926BDF8125D6C62A0054345A /* MotionManager.swift */,
+				926BDF8425D6D13F0054345A /* FirestoreManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		926BDF8B25D7DD190054345A /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				924DB3A425B962FB004034B5 /* FirstPageViewController.xib */,
+				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
+				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
+				9299D80525921FE9000251AD /* SettingsViewController.xib */,
+				9299D80925923E15000251AD /* MainViewController.xib */,
+				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		92DFD550258CBDBB0011DC97 = {
@@ -119,13 +140,14 @@
 		92DFD55B258CBDBB0011DC97 /* HealthyStep */ = {
 			isa = PBXGroup;
 			children = (
+				926BDF8A25D7DCFA0054345A /* Managers */,
+				924DB34F25AC7F97004034B5 /* ViewControllers */,
 				92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */,
 				92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */,
 				92DFD565258CBDBD0011DC97 /* Assets.xcassets */,
 				92DFD56A258CBDBD0011DC97 /* Info.plist */,
 				9299D81525939FB0000251AD /* GoogleService-Info.plist */,
 				92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */,
-				924DB34F25AC7F97004034B5 /* ViewControllers */,
 			);
 			path = HealthyStep;
 			sourceTree = "<group>";
@@ -285,11 +307,13 @@
 				92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */,
 				926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */,
 				92F0529A258E087B00EC476F /* RegistrationViewController.swift in Sources */,
+				926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */,
 				92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */,
+				926BDF8525D6D13F0054345A /* FirestoreManager.swift in Sources */,
 				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
 				9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */,
-				926BDF0C25CE8BA40054345A /* UserDefaultsSettings.swift in Sources */,
+				926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

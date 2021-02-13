@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     
         if (!email.isEmpty && !password.isEmpty) {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-              if let result = result {
+              if let _ = result {
                     completionHandler(true)
               } else {
                     completionHandler(false)

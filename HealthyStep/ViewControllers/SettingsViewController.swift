@@ -9,13 +9,6 @@
 import UIKit
 import Firebase
 
-struct KeyDefaults {
-    static let keyName = "gujfGWPulI"
-    static let keyBirthDate = "e6C7RfgnHh"
-    static let keyGender = "Bxea38Zy8I"
-    static let keyHeight = "eebNQcLuW1"
-    static let keyWeight = "DzoEnHXu2W"
-}
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var nameTF: UITextField!
@@ -24,56 +17,31 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
     
-    
-    let userDefaults = UserDefaults.standard
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createDatePicker()
-        loadUserDefaults()
+        
+        nameTF.text = UserSettingsManager.userNameSettings
+        birthDateTF.text = UserSettingsManager.userBirthDateSettings
+        genderPicker.selectedSegmentIndex = UserSettingsManager.userGenderSettings!
+        heightTF.text = UserSettingsManager.userHeightSettings
+        weightTF.text = UserSettingsManager.userWeightSettings
     }
     
     @IBAction func letsStartPressed(_ sender: Any) {
         
-        setUserDefaults()
-        
+        UserSettingsManager.userNameSettings = nameTF.text ?? ""
+        UserSettingsManager.userBirthDateSettings = birthDateTF.text ?? ""
+        UserSettingsManager.userGenderSettings = genderPicker.selectedSegmentIndex
+        UserSettingsManager.userHeightSettings = heightTF.text ?? ""
+        UserSettingsManager.userWeightSettings = weightTF.text ?? ""
+
         let mainPage = TabBarViewController()
         mainPage.modalPresentationStyle = .fullScreen
         self.present(mainPage, animated: true, completion: nil)
-    }
-    
-    func setUserDefaults() {
-        let name = nameTF.text
-        let birthDate = birthDateTF.text
-        let gender = genderPicker.selectedSegmentIndex
-        let height = heightTF.text
-        let weight = weightTF.text
-        
-        userDefaults.setValue(name, forKey: KeyDefaults.keyName)
-        userDefaults.setValue(birthDate, forKey: KeyDefaults.keyBirthDate)
-        userDefaults.set(gender, forKey: KeyDefaults.keyGender)
-        userDefaults.setValue(height, forKey: KeyDefaults.keyHeight)
-        userDefaults.setValue(weight, forKey: KeyDefaults.keyWeight)
-    }
-    
-    func loadUserDefaults() {
-        if let name = userDefaults.object(forKey: KeyDefaults.keyName) {
-            nameTF.text = name as? String
-        }
-        if let birthDate = userDefaults.object(forKey: KeyDefaults.keyBirthDate) {
-            birthDateTF.text = birthDate as? String
-        }
-        if let gender = userDefaults.object(forKey: KeyDefaults.keyGender) {
-            genderPicker.selectedSegmentIndex = gender as! Int
-        }
-        if let height = userDefaults.object(forKey: KeyDefaults.keyHeight) {
-            heightTF.text = height as? String
-        }
-        if let weight = userDefaults.object(forKey: KeyDefaults.keyWeight) {
-            weightTF.text = weight as? String
-        }
     }
     
     func createToolbar() -> UIToolbar {
@@ -113,8 +81,6 @@ class SettingsViewController: UIViewController {
         birthDateTF.inputAccessoryView = createToolbar()
     }
   
-   
-    
     @IBAction func signOutAction(_ sender: Any) {
         let firebaseAuth = Auth.auth()
             do {
@@ -125,5 +91,4 @@ class SettingsViewController: UIViewController {
                 print ("Error signing out: %@", signOutError)
             }
         }
-
 }

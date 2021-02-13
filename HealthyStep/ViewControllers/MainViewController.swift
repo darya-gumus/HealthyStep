@@ -20,14 +20,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var saveWorkoutButton: UIButton!
     
-    let pedometer = CMPedometer()
+    let firestoreManager = FirestoreManager()
+    
+    let motionManager = MotionManager()
     var shouldStartUpdating: Bool = false
     
     var timer = Timer()
     var timerCounting: Bool = false
     var count = 0
-    
-    var docRef: DocumentReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,17 @@ class MainViewController: UIViewController {
     func onStart() {
         startStopButton.setTitle("Stop", for: .normal)
         stepsCountLabel.text = "0"
-        startUpdating()
+        
+        motionManager.startUpdating { (pedometerData) in
+            DispatchQueue.main.async { [weak self] in
+                if let data = pedometerData {
+                    self?.stepsCountLabel.text = "\(data.numberOfSteps)"
+                } else {
+                    self?.stepsCountLabel.text = "Steps are not avalible"
+                    print("Steps are not avalible")
+                }
+            }
+        }
         
         timerCounting = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
@@ -54,7 +64,9 @@ class MainViewController: UIViewController {
 
     func onStop() {
         startStopButton.setTitle("Start", for: .normal)
-        stopUpdating()
+        
+        motionManager.pedometer.stopUpdates()
+        motionManager.pedometer.stopEventUpdates()
         
         timerCounting = false
         timer.invalidate()
@@ -82,52 +94,17 @@ class MainViewController: UIViewController {
         return timeString
     }
     
-    func startUpdating() {
-        if CMPedometer.isStepCountingAvailable() {
-            self.pedometer.startUpdates(from: Date()) { (pedometerData, error) in
-                if error == nil {
-                    if let data = pedometerData {
-                        DispatchQueue.main.async { [weak self] in
-                            self?.stepsCountLabel.text = "\(data.numberOfSteps)"
-                        }
-                    } else {
-                        self.stepsCountLabel.text = "Steps are not avalible"
-                    }
-                }
-            }
-                
-        } else {
-            stepsCountLabel.text = "Step Counter Not available"
-        }
-    }
-
-    func stopUpdating() {
-        pedometer.stopUpdates()
-        pedometer.stopEventUpdates()
-    }
-    
     @IBAction func saveWorkoutTapped(_ sender: Any) {
         
         let workoutDate = Date()
-        let timerData = timerCountLabel.text
-        let stepsData = stepsCountLabel.text
-        let distanceData = distanceCountLabel.text
-        let kcalData = kcalCountLabel.text
-    
-        let dataToSave: [String: Any] = [
-            "date": workoutDate,
-            "timer": timerData,
-            "steps": stepsData,
-            "distance": distanceData,
-            "kcal": kcalData
-        ]
+        let timerData = timerCountLabel.text!
+        let stepsData = stepsCountLabel.text!
+        let distanceData = distanceCountLabel.text!
+        let kcalData = kcalCountLabel.text!
         
-        docRef = Firestore.firestore().collection("workoutData").addDocument(data: dataToSave) { (error) in
-            if let error = error {
-                print("Got an error: \(error.localizedDescription)")
-            } else {
-                print("WorkoutData has been saved!")
-            }
-        }
+        firestoreManager.dataToSave = WorkoutData(date: workoutDate, timerData: timerData, stepsData: stepsData, distanceData: distanceData, kcalData: kcalData)
+        
+        firestoreManager.saveWorkoutData()
+
     }
 }
