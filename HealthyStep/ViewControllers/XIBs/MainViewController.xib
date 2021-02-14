@@ -53,13 +53,13 @@
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 km" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0z-Fz-ZKC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0z-Fz-ZKC">
                     <rect key="frame" x="0.0" y="323.66666666666669" width="375" height="37.333333333333314"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 kcal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-RL-hGW">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ET-RL-hGW">
                     <rect key="frame" x="0.0" y="401" width="375" height="37.333333333333314"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
