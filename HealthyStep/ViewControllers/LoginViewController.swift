@@ -53,7 +53,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     func entrance(completionHandler: @escaping (Bool)-> Void) {
@@ -74,5 +73,4 @@ class LoginViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
-
 }

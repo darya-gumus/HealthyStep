@@ -18,7 +18,11 @@ class TableViewCell: UITableViewCell {
     
     
     func setWorkout(workout: WorkoutData) {
-//        dateLabel.text = workout.date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy  HH:mm"
+        let dateString = formatter.string(from: workout.date)
+        
+        dateLabel.text = dateString
         timerLabel.text = workout.timerData
         stepsLabel.text = workout.stepsData + " steps"
         distanceLabel.text = workout.distanceData + " km"

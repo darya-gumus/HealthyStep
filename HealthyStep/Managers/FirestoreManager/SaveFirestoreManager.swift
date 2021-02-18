@@ -11,10 +11,10 @@ import Firebase
  
 class SaveFirestoreManager {
     
-    var dataToSave = WorkoutDataD(date: Date(), timerData: "", stepsData: "", distanceData: "", kcalData: "")
-
+    var dataToSave = WorkoutData(date: Date(), timerData: "", stepsData: "", distanceData: "", kcalData: "")
+    
     func saveWorkoutData () {
-        Firestore.firestore().collection("workoutData").addDocument(data: dataToSave.workoutDictionary) { (error) in
+        Firestore.firestore().collection("workoutData").document().setData(dataToSave.workoutDictionary) { (error) in
             if let error = error {
                 print("Got an error: \(error.localizedDescription)")
             } else {
@@ -22,7 +22,6 @@ class SaveFirestoreManager {
             }
         }
     }
-    
 }
 
 

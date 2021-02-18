@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreMotion
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
      
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        CMPedometer().queryPedometerData(from: Date(), to: Date()) { (_, _) in }
         FirebaseApp.configure()
         
         return true

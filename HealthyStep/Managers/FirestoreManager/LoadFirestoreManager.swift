@@ -7,13 +7,10 @@
 //
 
 import Foundation
-import FirebaseFirestore
+import Firebase
 
 class LoadFirestoreManager {
-    
-    var workoutData = [WorkoutData]()
-
-    func loadWorkoutData() {
+    func loadWorkoutData(successBlock: @escaping ([WorkoutData]) -> Void) {
         Firestore.firestore().collection("workoutData").addSnapshotListener { (querySnapshot, error) in
         
             guard let documents = querySnapshot?.documents else {
@@ -21,10 +18,12 @@ class LoadFirestoreManager {
                 return
             }
         
-            self.workoutData = documents.map{ (queryDocumentSnapshot) -> WorkoutData in
+            var workoutData = documents.map{ (queryDocumentSnapshot) -> WorkoutData in
                 let docData = queryDocumentSnapshot.data()
-            
-                let date = docData["data"] as? Date ?? Date()
+                
+                let firebaseDate = docData["date"] as? Timestamp
+                let date = firebaseDate?.dateValue() ?? Date()
+                
                 let timerData = docData["timer"] as? String ?? "00 : 00 : 00"
                 let stepsData = docData["steps"] as? String ?? "0"
                 let distanceData = docData["distance"] as? String ?? "0.0"
@@ -32,7 +31,8 @@ class LoadFirestoreManager {
             
                 return WorkoutData(date: date, timerData: timerData, stepsData: stepsData, distanceData: distanceData, kcalData: kcalData)
             }
-//        print(self.workoutData)
+            workoutData.sort(by: {$0.date > $1.date })
+            successBlock(workoutData)
         }
     }
 }

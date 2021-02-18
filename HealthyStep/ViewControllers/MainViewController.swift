@@ -33,7 +33,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         startStopButton.addTarget(self, action: #selector(didTapStartStopButton), for: .touchUpInside)
-        
     }
     
     @objc private func didTapStartStopButton() {
@@ -70,7 +69,6 @@ class MainViewController: UIViewController {
         
         timerCounting = false
         timer.invalidate()
-        
     }
     
     @objc func timerCounter() {
@@ -101,9 +99,8 @@ class MainViewController: UIViewController {
         let distanceData = distanceCountLabel.text!
         let kcalData = kcalCountLabel.text!
         
-        firestoreManager.dataToSave = WorkoutDataD(date: workoutDate, timerData: timerData, stepsData: stepsData, distanceData: distanceData, kcalData: kcalData)
+        firestoreManager.dataToSave = WorkoutData(date: workoutDate, timerData: timerData, stepsData: stepsData, distanceData: distanceData, kcalData: kcalData)
         
         firestoreManager.saveWorkoutData()
-
     }
 }

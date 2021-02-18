@@ -10,7 +10,6 @@ import Foundation
 import CoreMotion
 
 class MotionManager {
-    
     let pedometer = CMPedometer()
     
     func startUpdating(motionDataHandler : @escaping (CMPedometerData?) -> Void) {
@@ -22,5 +21,4 @@ class MotionManager {
             }
         }
     }
-    
 }

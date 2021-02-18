@@ -9,7 +9,6 @@
 import UIKit
 
 class TabBarViewController: UIViewController {
-    
     let tabBarVC = UITabBarController()
     
     override func viewDidLoad() {
@@ -27,5 +26,4 @@ class TabBarViewController: UIViewController {
         
         self.view.addSubview(tabBarVC.view)
     }
-  
 }

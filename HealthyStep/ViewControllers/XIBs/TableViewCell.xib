@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phd-QJ-8bN">
-                        <rect key="frame" x="30" y="10" width="42" height="36"/>
+                        <rect key="frame" x="30" y="5" width="42" height="41"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -48,12 +48,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="phd-QJ-8bN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="9bR-Ch-dFi"/>
                     <constraint firstAttribute="bottom" secondItem="DHB-Eh-c4I" secondAttribute="bottom" constant="10" id="Asf-M9-DhP"/>
                     <constraint firstItem="f12-VF-zpa" firstAttribute="top" secondItem="phd-QJ-8bN" secondAttribute="bottom" constant="5" id="H9q-fL-cd9"/>
                     <constraint firstItem="f12-VF-zpa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="IJI-oa-ku5"/>
-                    <constraint firstItem="phd-QJ-8bN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="O9O-Qt-y32"/>
+                    <constraint firstItem="phd-QJ-8bN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="O9O-Qt-y32"/>
                     <constraint firstItem="hrU-Mx-6nn" firstAttribute="top" secondItem="Jrj-dg-wkp" secondAttribute="bottom" constant="5" id="TCj-Xl-KVY"/>
                     <constraint firstItem="DHB-Eh-c4I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="Ted-pm-sqv"/>
                     <constraint firstItem="Jrj-dg-wkp" firstAttribute="top" secondItem="f12-VF-zpa" secondAttribute="bottom" constant="5" id="VFb-bZ-Z6v"/>
@@ -63,6 +64,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.67280066009999995" green="1" blue="0.93332988019999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
                 <outlet property="dateLabel" destination="phd-QJ-8bN" id="4rO-th-Hm3"/>
                 <outlet property="distanceLabel" destination="hrU-Mx-6nn" id="6zJ-GR-8aF"/>

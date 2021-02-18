@@ -33,7 +33,6 @@
 		92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F0529D258E4E0400EC476F /* LoginViewController.xib */; };
 		92FDC3CC25D95C5A00821E7F /* LoadFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */; };
 		92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */; };
-		92FDC3D825D96DA700821E7F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3D725D96DA700821E7F /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +65,6 @@
 		92F0529D258E4E0400EC476F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFirestoreManager.swift; sourceTree = "<group>"; };
 		92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkouDataModel.swift; sourceTree = "<group>"; };
-		92FDC3D725D96DA700821E7F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +153,6 @@
 				926BDF8A25D7DCFA0054345A /* Managers */,
 				92FDC3D325D95DF700821E7F /* Models */,
 				924DB34F25AC7F97004034B5 /* ViewControllers */,
-				92FDC3D725D96DA700821E7F /* DateFormatter.swift */,
 				92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */,
 				92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */,
 				92DFD565258CBDBD0011DC97 /* Assets.xcassets */,
@@ -210,6 +207,8 @@
 			dependencies = (
 			);
 			name = HealthyStep;
+			packageProductDependencies = (
+			);
 			productName = HealthyStep;
 			productReference = 92DFD559258CBDBB0011DC97 /* HealthyStep.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +237,8 @@
 				Base,
 			);
 			mainGroup = 92DFD550258CBDBB0011DC97;
+			packageReferences = (
+			);
 			productRefGroup = 92DFD55A258CBDBB0011DC97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,7 +335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92FDC3D825D96DA700821E7F /* DateFormatter.swift in Sources */,
 				926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */,
 				926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */,
 				9299D80A25923E15000251AD /* MainViewController.swift in Sources */,

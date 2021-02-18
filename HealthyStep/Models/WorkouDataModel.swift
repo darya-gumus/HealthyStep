@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WorkoutDataD {
+struct WorkoutData {
     var date: Date
     var timerData: String
     var stepsData: String
@@ -26,10 +26,3 @@ struct WorkoutDataD {
     }
 }
 
-struct WorkoutData {
-    var date: Date
-    var timerData: String
-    var stepsData: String
-    var distanceData: String
-    var kcalData: String
-}

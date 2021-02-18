@@ -9,17 +9,14 @@
 import Foundation
 
 struct KeyDefaults {
-    
     static let keyName = "UserName.settings.key"
     static let keyBirthDate = "BirthDate.settings.key"
     static let keyGender = "Gender.settings.key"
     static let keyHeight = "Height.settings.key"
     static let keyWeight = "Weight.settings.key"
-    
 }
 
 class UserSettingsManager {
-    
     static let userDefaults = UserDefaults.standard
     
     public static var userNameSettings: String? {
@@ -30,7 +27,6 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyName)
         }
     }
-    
     public static var userBirthDateSettings: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyBirthDate)
@@ -39,7 +35,6 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyBirthDate)
         }
     }
-    
     public static var userGenderSettings: Int? {
         get {
             userDefaults.integer(forKey: KeyDefaults.keyGender)
@@ -48,7 +43,6 @@ class UserSettingsManager {
             userDefaults.set(newValue, forKey: KeyDefaults.keyGender)
         }
     }
-    
     public static var userHeightSettings: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyHeight)
@@ -57,7 +51,6 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyHeight)
         }
     }
-    
     public static var userWeightSettings: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyWeight)
@@ -66,5 +59,4 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyWeight)
         }
     }
-    
 }
