@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06AAC70A599CEC542583D71C /* Pods_HealthyStep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */; };
+		45814611A8EBE662A1173D47 /* Pods_HealthyStep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */; };
+		924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DB3A325B962FB004034B5 /* FirstPageViewController.swift */; };
+		924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924DB3A425B962FB004034B5 /* FirstPageViewController.xib */; };
+		926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED325CB16ED0054345A /* ReportsViewController.swift */; };
+		926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDED425CB16ED0054345A /* ReportsViewController.xib */; };
+		926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDEF225CC19B40054345A /* TabBarViewController.swift */; };
+		926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */; };
+		926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8125D6C62A0054345A /* MotionManager.swift */; };
+		926BDF8525D6D13F0054345A /* SaveFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */; };
+		926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDFC325D92AC90054345A /* TableViewCell.swift */; };
+		926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDFC425D92AC90054345A /* TableViewCell.xib */; };
 		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
 		9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80525921FE9000251AD /* SettingsViewController.xib */; };
 		9299D80A25923E15000251AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80825923E15000251AD /* MainViewController.swift */; };
 		9299D80B25923E15000251AD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80925923E15000251AD /* MainViewController.xib */; };
-		9299D80E2592472A000251AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80C2592472A000251AD /* Main.storyboard */; };
-		9299D810259247C7000251AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80F259247C7000251AD /* ViewController.swift */; };
 		9299D81625939FB0000251AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9299D81525939FB0000251AD /* GoogleService-Info.plist */; };
 		92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */; };
 		92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */; };
@@ -23,16 +31,27 @@
 		92F0529B258E087B00EC476F /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F05299258E087B00EC476F /* RegistrationViewController.xib */; };
 		92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F0529C258E4E0400EC476F /* LoginViewController.swift */; };
 		92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F0529D258E4E0400EC476F /* LoginViewController.xib */; };
+		92FDC3CC25D95C5A00821E7F /* LoadFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */; };
+		92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
+		5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyStep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		924DB3A325B962FB004034B5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		924DB3A425B962FB004034B5 /* FirstPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageViewController.xib; sourceTree = "<group>"; };
+		926BDED325CB16ED0054345A /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		926BDED425CB16ED0054345A /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
+		926BDEF225CC19B40054345A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
+		926BDF8125D6C62A0054345A /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFirestoreManager.swift; sourceTree = "<group>"; };
+		926BDFC325D92AC90054345A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		926BDFC425D92AC90054345A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9299D80525921FE9000251AD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9299D80825923E15000251AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9299D80925923E15000251AD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		9299D80D2592472A000251AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = HealthyStep/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9299D80F259247C7000251AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9299D81525939FB0000251AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92DFD559258CBDBB0011DC97 /* HealthyStep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyStep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +63,9 @@
 		92F05299258E087B00EC476F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		92F0529C258E4E0400EC476F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		92F0529D258E4E0400EC476F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyStep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5D0E007E4A3EA6DC8D1ED1C /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
+		92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFirestoreManager.swift; sourceTree = "<group>"; };
+		92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkouDataModel.swift; sourceTree = "<group>"; };
+		A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06AAC70A599CEC542583D71C /* Pods_HealthyStep.framework in Frameworks */,
+				45814611A8EBE662A1173D47 /* Pods_HealthyStep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +83,8 @@
 		7A16124E9685941A486BC021 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */,
-				F5D0E007E4A3EA6DC8D1ED1C /* Pods-HealthyStep.release.xcconfig */,
+				5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */,
+				A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -72,16 +92,41 @@
 		924DB34F25AC7F97004034B5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				926BDF8B25D7DD190054345A /* XIBs */,
+				924DB3A325B962FB004034B5 /* FirstPageViewController.swift */,
 				92F05298258E087B00EC476F /* RegistrationViewController.swift */,
-				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
-				9299D80425921FE9000251AD /* SettingsViewController.swift */,
-				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 				92F0529C258E4E0400EC476F /* LoginViewController.swift */,
-				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
+				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
+				9299D80425921FE9000251AD /* SettingsViewController.swift */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
-				9299D80925923E15000251AD /* MainViewController.xib */,
+				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
+				926BDFC325D92AC90054345A /* TableViewCell.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		926BDF8A25D7DCFA0054345A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */,
+				926BDF8125D6C62A0054345A /* MotionManager.swift */,
+				92FDC3D425D95E2C00821E7F /* FirestoreManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		926BDF8B25D7DD190054345A /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				924DB3A425B962FB004034B5 /* FirstPageViewController.xib */,
+				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
+				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
+				9299D80525921FE9000251AD /* SettingsViewController.xib */,
+				9299D80925923E15000251AD /* MainViewController.xib */,
+				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
+				926BDFC425D92AC90054345A /* TableViewCell.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		92DFD550258CBDBB0011DC97 = {
@@ -90,7 +135,7 @@
 				92DFD55B258CBDBB0011DC97 /* HealthyStep */,
 				92DFD55A258CBDBB0011DC97 /* Products */,
 				7A16124E9685941A486BC021 /* Pods */,
-				E1470DEC9A7288B467C1E854 /* Frameworks */,
+				B02635DD70D0183CF4A3E3E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,23 +150,40 @@
 		92DFD55B258CBDBB0011DC97 /* HealthyStep */ = {
 			isa = PBXGroup;
 			children = (
+				926BDF8A25D7DCFA0054345A /* Managers */,
+				92FDC3D325D95DF700821E7F /* Models */,
 				924DB34F25AC7F97004034B5 /* ViewControllers */,
 				92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */,
 				92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */,
 				92DFD565258CBDBD0011DC97 /* Assets.xcassets */,
 				92DFD56A258CBDBD0011DC97 /* Info.plist */,
 				9299D81525939FB0000251AD /* GoogleService-Info.plist */,
-				9299D80F259247C7000251AD /* ViewController.swift */,
-				9299D80C2592472A000251AD /* Main.storyboard */,
 				92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */,
 			);
 			path = HealthyStep;
 			sourceTree = "<group>";
 		};
-		E1470DEC9A7288B467C1E854 /* Frameworks */ = {
+		92FDC3D325D95DF700821E7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F34589D53CC59685C03D0610 /* Pods_HealthyStep.framework */,
+				92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92FDC3D425D95E2C00821E7F /* FirestoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */,
+				92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */,
+			);
+			path = FirestoreManager;
+			sourceTree = "<group>";
+		};
+		B02635DD70D0183CF4A3E3E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,17 +195,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92DFD56D258CBDBD0011DC97 /* Build configuration list for PBXNativeTarget "HealthyStep" */;
 			buildPhases = (
-				CFDADFD6833DD58DF0400CA0 /* [CP] Check Pods Manifest.lock */,
+				9263E681713E12BCE330C261 /* [CP] Check Pods Manifest.lock */,
 				92DFD555258CBDBB0011DC97 /* Sources */,
 				92DFD556258CBDBB0011DC97 /* Frameworks */,
 				92DFD557258CBDBB0011DC97 /* Resources */,
-				FF4B0D81C51435DEC9D35C08 /* [CP] Embed Pods Frameworks */,
+				924DB3AA25B96A5B004034B5 /* ShellScript */,
+				FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HealthyStep;
+			packageProductDependencies = (
+			);
 			productName = HealthyStep;
 			productReference = 92DFD559258CBDBB0011DC97 /* HealthyStep.app */;
 			productType = "com.apple.product-type.application";
@@ -155,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Darya Gumus";
 				TargetAttributes = {
 					92DFD558258CBDBB0011DC97 = {
@@ -172,6 +237,8 @@
 				Base,
 			);
 			mainGroup = 92DFD550258CBDBB0011DC97;
+			packageReferences = (
+			);
 			productRefGroup = 92DFD55A258CBDBB0011DC97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,7 +253,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9299D80E2592472A000251AD /* Main.storyboard in Resources */,
+				924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */,
+				926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */,
+				926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */,
 				92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */,
 				9299D81625939FB0000251AD /* GoogleService-Info.plist in Resources */,
 				9299D80B25923E15000251AD /* MainViewController.xib in Resources */,
@@ -200,7 +269,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CFDADFD6833DD58DF0400CA0 /* [CP] Check Pods Manifest.lock */ = {
+		924DB3AA25B96A5B004034B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		9263E681713E12BCE330C261 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,7 +311,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF4B0D81C51435DEC9D35C08 /* [CP] Embed Pods Frameworks */ = {
+		FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,27 +335,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */,
+				926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */,
 				9299D80A25923E15000251AD /* MainViewController.swift in Sources */,
 				92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */,
+				92FDC3CC25D95C5A00821E7F /* LoadFirestoreManager.swift in Sources */,
+				926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */,
 				92F0529A258E087B00EC476F /* RegistrationViewController.swift in Sources */,
+				926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */,
 				92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */,
-				9299D810259247C7000251AD /* ViewController.swift in Sources */,
+				926BDF8525D6D13F0054345A /* SaveFirestoreManager.swift in Sources */,
+				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
 				9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */,
+				92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */,
+				926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9299D80C2592472A000251AD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9299D80D2592472A000251AD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -304,6 +393,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -364,6 +454,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -394,11 +485,12 @@
 		};
 		92DFD56E258CBDBD0011DC97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D70391DABB264F394168651 /* Pods-HealthyStep.debug.xcconfig */;
+			baseConfigurationReference = 5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = K4YRK942R3;
 				INFOPLIST_FILE = HealthyStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,7 +506,7 @@
 		};
 		92DFD56F258CBDBD0011DC97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5D0E007E4A3EA6DC8D1ED1C /* Pods-HealthyStep.release.xcconfig */;
+			baseConfigurationReference = A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";

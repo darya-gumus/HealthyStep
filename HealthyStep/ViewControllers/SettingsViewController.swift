@@ -7,61 +7,88 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var birthDate: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var birthDateTF: UITextField!
+    @IBOutlet weak var genderPicker: UISegmentedControl!
+    @IBOutlet weak var heightTF: UITextField!
+    @IBOutlet weak var weightTF: UITextField!
+    
     let datePicker = UIDatePicker()
-    
-    @IBOutlet weak var heightLabel: UILabel!
-    
-    @IBOutlet weak var weightLabel: UILabel!
-    
-    @IBAction func letsStartPressed(_ sender: Any) {
-        let mainPage = MainViewController(nibName: "MainViewController", bundle: nil)
-        self.present(mainPage, animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         createDatePicker()
+        
+        nameTF.text = UserSettingsManager.userNameSettings
+        birthDateTF.text = UserSettingsManager.userBirthDateSettings
+        genderPicker.selectedSegmentIndex = UserSettingsManager.userGenderSettings!
+        heightTF.text = UserSettingsManager.userHeightSettings
+        weightTF.text = UserSettingsManager.userWeightSettings
     }
+    
+    @IBAction func letsStartPressed(_ sender: Any) {
+        
+        UserSettingsManager.userNameSettings = nameTF.text ?? ""
+        UserSettingsManager.userBirthDateSettings = birthDateTF.text ?? ""
+        UserSettingsManager.userGenderSettings = genderPicker.selectedSegmentIndex
+        UserSettingsManager.userHeightSettings = heightTF.text ?? ""
+        UserSettingsManager.userWeightSettings = weightTF.text ?? ""
 
+        let mainPage = TabBarViewController()
+        mainPage.modalPresentationStyle = .fullScreen
+        self.present(mainPage, animated: true, completion: nil)
+    }
+    
     func createToolbar() -> UIToolbar {
-        //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
-        //done button
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonPressed))
         toolbar.setItems([doneButton], animated: true)
         
         return toolbar
     }
     
+    @objc func doneButtonPressed() {
+        let birthDate = datePicker.date
+        let todayDate = Date()
+        
+        if birthDate < todayDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            dateFormatter.dateFormat = "dd.MM.yyyy"
+        
+            self.birthDateTF.text = dateFormatter.string(from: datePicker.date)
+            self.view.endEditing(true)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Please, select correct date!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
     func createDatePicker() {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
-        birthDate.inputView = datePicker
-        birthDate.inputAccessoryView = createToolbar()
+        birthDateTF.inputView = datePicker
+        birthDateTF.inputAccessoryView = createToolbar()
     }
   
-    @objc func doneButtonPressed() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        dateFormatter.dateFormat = "dd. MM. yyyy"
-        
-        self.birthDate.text = dateFormatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
-    
-    @IBAction func heightSliderDidSlide(_ sender: UISlider){
-        let value: Int = Int(sender.value)
-        heightLabel.text = "\(value)"
-    }
-    @IBAction func weightSliderDidSlide(_ sender: UISlider){
-        let value = ((sender.value)*10).rounded()/10
-        weightLabel.text = "\(value)"
-    }
+    @IBAction func signOutAction(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                self.dismiss(animated: false, completion: nil)
+                self.present(FirstPageViewController(), animated: true, completion: nil)
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+        }
 }

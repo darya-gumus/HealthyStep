@@ -16,27 +16,23 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var repeatPasswordField: UITextField!
     
     @IBAction func singUpAction(_ sender: Any) {
-        let settingsPage = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+        let mainPage = TabBarViewController()
         register { (success) in
             if success {
-                self.present(settingsPage, animated: true, completion: nil)
+                mainPage.modalPresentationStyle = .fullScreen
+                self.present(mainPage, animated: true, completion: nil)
             }
         }
     }
     
     @IBAction func logInAction(_ sender: Any) {
         let logInPage = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        logInPage.modalPresentationStyle = .fullScreen
         self.present(logInPage, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func showAlert() {
-        let alert = UIAlertController(title: "Error", message: "Please, fill in all fields", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
     
     func register(completionHandler: @escaping (Bool)-> Void) {
@@ -47,14 +43,16 @@ class RegistrationViewController: UIViewController {
         if (!email.isEmpty && !password.isEmpty && !repeatPassword.isEmpty && password == repeatPassword) {
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             
-                if let result = result {
+                if let _ = result {
                     completionHandler(true)
                 } else {
                     completionHandler(false)
                 }
             }
         } else {
-            showAlert()
+            let alert = UIAlertController(title: "Error", message: "Please, fill in all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
 }
