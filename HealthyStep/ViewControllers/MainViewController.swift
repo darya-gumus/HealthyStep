@@ -42,12 +42,25 @@ class MainViewController: UIViewController {
     
     func onStart() {
         startStopButton.setTitle("Stop", for: .normal)
-        stepsCountLabel.text = "0"
+        stepsCountLabel.text = "0 steps"
+        distanceCountLabel.text = "0 meters"
+        kcalCountLabel.text = "0 kcal"
         
         motionManager.startUpdating { (pedometerData) in
             DispatchQueue.main.async { [weak self] in
                 if let data = pedometerData {
-                    self?.stepsCountLabel.text = "\(data.numberOfSteps)"
+                    
+                    let steps = Int(truncating: data.numberOfSteps)
+                    let distanceM = Int(truncating: data.distance!)
+
+                    let weightKg = Double(UserSettingsManager.userWeightSettings ?? "60") ?? 60
+                    
+                    let kcal = 0.5 * weightKg * Double(distanceM / 1000)
+                    let kcalStr = String(format:"%.1f", kcal)
+                    
+                    self?.stepsCountLabel.text = "\(steps) steps"
+                    self?.distanceCountLabel.text = "\(distanceM) meters"
+                    self?.kcalCountLabel.text = "\(kcalStr) kcal"
                 } else {
                     self?.stepsCountLabel.text = "Steps are not avalible"
                     print("Steps are not avalible")

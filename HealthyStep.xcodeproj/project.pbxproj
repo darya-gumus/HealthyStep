@@ -18,6 +18,9 @@
 		926BDF8525D6D13F0054345A /* SaveFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */; };
 		926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDFC325D92AC90054345A /* TableViewCell.swift */; };
 		926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDFC425D92AC90054345A /* TableViewCell.xib */; };
+		92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */; };
+		92986C1025E00D650078D2D8 /* ChartBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */; };
+		92986C1A25E053F20078D2D8 /* ChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92986C1925E053F20078D2D8 /* ChartSwiftUIView.swift */; };
 		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
 		9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80525921FE9000251AD /* SettingsViewController.xib */; };
 		9299D80A25923E15000251AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80825923E15000251AD /* MainViewController.swift */; };
@@ -35,6 +38,19 @@
 		92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		92986C1825E053B00078D2D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
 		7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyStep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +64,9 @@
 		926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFirestoreManager.swift; sourceTree = "<group>"; };
 		926BDFC325D92AC90054345A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		926BDFC425D92AC90054345A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewController.swift; sourceTree = "<group>"; };
+		92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartBarViewController.xib; sourceTree = "<group>"; };
+		92986C1925E053F20078D2D8 /* ChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSwiftUIView.swift; sourceTree = "<group>"; };
 		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9299D80525921FE9000251AD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9299D80825923E15000251AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +118,8 @@
 				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
+				92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */,
+				92986C1925E053F20078D2D8 /* ChartSwiftUIView.swift */,
 				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
 				926BDFC325D92AC90054345A /* TableViewCell.swift */,
 			);
@@ -123,6 +144,7 @@
 				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
 				9299D80525921FE9000251AD /* SettingsViewController.xib */,
 				9299D80925923E15000251AD /* MainViewController.xib */,
+				92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */,
 				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
 				926BDFC425D92AC90054345A /* TableViewCell.xib */,
 			);
@@ -201,6 +223,7 @@
 				92DFD557258CBDBB0011DC97 /* Resources */,
 				924DB3AA25B96A5B004034B5 /* ShellScript */,
 				FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */,
+				92986C1825E053B00078D2D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */,
+				92986C1025E00D650078D2D8 /* ChartBarViewController.xib in Resources */,
 				926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */,
 				926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */,
 				92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */,
@@ -346,7 +370,9 @@
 				92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */,
 				926BDF8525D6D13F0054345A /* SaveFirestoreManager.swift in Sources */,
 				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
+				92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
+				92986C1A25E053F20078D2D8 /* ChartSwiftUIView.swift in Sources */,
 				9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */,
 				92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */,
 				926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */,
