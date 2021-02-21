@@ -20,12 +20,12 @@
 		926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDFC425D92AC90054345A /* TableViewCell.xib */; };
 		92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */; };
 		92986C1025E00D650078D2D8 /* ChartBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */; };
-		92986C1A25E053F20078D2D8 /* ChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92986C1925E053F20078D2D8 /* ChartSwiftUIView.swift */; };
 		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
 		9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80525921FE9000251AD /* SettingsViewController.xib */; };
 		9299D80A25923E15000251AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80825923E15000251AD /* MainViewController.swift */; };
 		9299D80B25923E15000251AD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80925923E15000251AD /* MainViewController.xib */; };
 		9299D81625939FB0000251AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9299D81525939FB0000251AD /* GoogleService-Info.plist */; };
+		92D7B1B325E13ECF0069D2C0 /* StepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */; };
 		92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */; };
 		92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */; };
 		92DFD566258CBDBD0011DC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DFD565258CBDBD0011DC97 /* Assets.xcassets */; };
@@ -66,12 +66,12 @@
 		926BDFC425D92AC90054345A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewController.swift; sourceTree = "<group>"; };
 		92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartBarViewController.xib; sourceTree = "<group>"; };
-		92986C1925E053F20078D2D8 /* ChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSwiftUIView.swift; sourceTree = "<group>"; };
 		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9299D80525921FE9000251AD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		9299D80825923E15000251AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9299D80925923E15000251AD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		9299D81525939FB0000251AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsModel.swift; sourceTree = "<group>"; };
 		92DFD559258CBDBB0011DC97 /* HealthyStep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyStep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,10 +118,9 @@
 				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
 				9299D80425921FE9000251AD /* SettingsViewController.swift */,
 				9299D80825923E15000251AD /* MainViewController.swift */,
-				92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */,
-				92986C1925E053F20078D2D8 /* ChartSwiftUIView.swift */,
 				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
 				926BDFC325D92AC90054345A /* TableViewCell.swift */,
+				92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */,
+				92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,8 +372,8 @@
 				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
 				92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
-				92986C1A25E053F20078D2D8 /* ChartSwiftUIView.swift in Sources */,
 				9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */,
+				92D7B1B325E13ECF0069D2C0 /* StepsModel.swift in Sources */,
 				92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */,
 				926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */,
 			);
@@ -444,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -499,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
