@@ -62,7 +62,7 @@ class FirestoreManager {
         if let user = Auth.auth().currentUser {
             let uid = user.uid
             
-            Firestore.firestore().collection("users").document(uid).collection("workoutData").getDocuments() { (querySnapshot, error) in
+            Firestore.firestore().collection("users").document(uid).collection("workoutData").addSnapshotListener { (querySnapshot, error) in
         
                 guard let documents = querySnapshot?.documents else {
                     print("No documents")
@@ -95,51 +95,170 @@ class FirestoreManager {
         }
     }
 }
+
 //extension FirestoreManager: SettingsStorage {
 //    var userName: String? {
 //        get {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
+//                    if let document = document, document.exists {
+//                        let dataDescription = document.data().map {_ in
+//                            self.userName = "userName"
+//                        }
+//                    } else {
+//                        print("Document does not exist")
+//                    }
+//                }
+//            }
 //        }
 //        set {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).setData(
+//                    ["userName": userName]) { (error) in
+//
+//                    if let error = error {
+//                        print("Got an error: \(error.localizedDescription)")
+//                    } else {
+//                        print("WorkoutData has been saved!")
+//                    }
+//                }
+//            }
 //        }
 //    }
-//    
+//
 //    var userBirthDate: String? {
 //        get {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
+//                    if let document = document, document.exists {
+//                        let dataDescription = document.data().map {_ in
+//                            self.userBirthDate = "userBirthDate"
+//                        }
+//                    } else {
+//                        print("Document does not exist")
+//                    }
+//                }
+//            }
 //        }
 //        set {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).setData(
+//                    ["userBirthDate": userBirthDate]) { (error) in
+//
+//                    if let error = error {
+//                        print("Got an error: \(error.localizedDescription)")
+//                    } else {
+//                        print("WorkoutData has been saved!")
+//                    }
+//                }
+//            }
 //        }
 //    }
-//    
+//
 //    var userGender: Int? {
 //        get {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
+//                    if let document = document, document.exists {
+//                        let dataDescription = document.data().map {_ in
+//                            self.userGender = 0
+//                        }
+//                    } else {
+//                        print("Document does not exist")
+//                    }
+//                }
+//            }
 //        }
 //        set {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).setData(
+//                    ["userGender": userGender]) { (error) in
+//
+//                    if let error = error {
+//                        print("Got an error: \(error.localizedDescription)")
+//                    } else {
+//                        print("WorkoutData has been saved!")
+//                    }
+//                }
+//            }
 //        }
 //    }
-//    
+//
 //    var userHeight: String? {
 //        get {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
+//                    if let document = document, document.exists {
+//                        let dataDescription = document.data().map {_ in
+//                            self.userHeight = "userHeight"
+//                        }
+//                    } else {
+//                        print("Document does not exist")
+//                    }
+//                }
+//            }
 //        }
 //        set {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).setData(
+//                    ["userHeight": userHeight]) { (error) in
+//
+//                    if let error = error {
+//                        print("Got an error: \(error.localizedDescription)")
+//                    } else {
+//                        print("WorkoutData has been saved!")
+//                    }
+//                }
+//            }
 //        }
 //    }
-//    
+//
 //    var userWeight: String? {
 //        get {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).getDocument { (document, error) in
+//                    if let document = document, document.exists {
+//                        let dataDescription = document.data().map {_ in
+//                            self.userWeight = "userWeight"
+//                        }
+//                    } else {
+//                        print("Document does not exist")
+//                    }
+//                }
+//            }
 //        }
 //        set {
-//            <#code#>
+//            if let user = Auth.auth().currentUser {
+//                let uid = user.uid
+//
+//                Firestore.firestore().collection("users").document(uid).setData(
+//                    ["userWeight": userWeight]) { (error) in
+//
+//                    if let error = error {
+//                        print("Got an error: \(error.localizedDescription)")
+//                    } else {
+//                        print("WorkoutData has been saved!")
+//                    }
+//                }
+//            }
 //        }
 //    }
-//    
-//    
 //}

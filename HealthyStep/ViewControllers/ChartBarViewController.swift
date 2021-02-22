@@ -38,8 +38,15 @@ class ChartBarViewController: UIViewController, ChartViewDelegate {
             
             let set = BarChartDataSet(entries: self?.entries)
             set.colors = ChartColorTemplates.liberty()
+            set.label = "Workout Steps for the all period"
+            
             let data = BarChartData(dataSet: set)
             self?.barChart.data = data
+            self?.barChart.rightAxis.enabled = false
+            self?.barChart.xAxis.labelPosition = .bottom
+           
+//            self?.barChart.zoom(scaleX: 1.5, scaleY: 1, x: 0, y: 0)
+//            self?.barChart.setScaleEnabled(false)
         }
     }
 }
