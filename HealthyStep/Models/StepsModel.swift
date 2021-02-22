@@ -7,10 +7,8 @@
 //
 
 import Foundation
-import Charts
 
 struct Steps {
     var date: Double
     var stepsData: Double
-
 }

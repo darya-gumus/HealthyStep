@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var saveWorkoutButton: UIButton!
     
-    let firestoreManager = SaveFirestoreManager()
+    let firestoreManager = FirestoreManager()
     
     let motionManager = MotionManager()
     var shouldStartUpdating: Bool = false
@@ -106,6 +106,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func saveWorkoutTapped(_ sender: Any) {
+        
         let workoutDate = Date()
         let timerData = timerCountLabel.text!
         let stepsData = stepsCountLabel.text!
@@ -117,3 +118,4 @@ class MainViewController: UIViewController {
         firestoreManager.saveWorkoutData()
     }
 }
+

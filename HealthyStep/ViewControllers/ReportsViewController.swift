@@ -25,7 +25,7 @@ class ReportsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        LoadFirestoreManager().loadWorkoutData { [weak self] workouts in
+        FirestoreManager().loadWorkoutData { [weak self] workouts in
             self?.workoutData = workouts
             self?.tableView.reloadData()
         }

@@ -29,9 +29,8 @@ class ChartBarViewController: UIViewController, ChartViewDelegate {
         
         view.addSubview(barChart)
         
-        LoadFirestoreManager().loadSteps { [weak self] steps in
+        FirestoreManager().loadSteps { [weak self] steps in
             self?.steps = steps
-            print(steps)
             
             for x in steps {
                 self?.entries.append(BarChartDataEntry(x: Double(x.date) , y: Double(x.stepsData)))

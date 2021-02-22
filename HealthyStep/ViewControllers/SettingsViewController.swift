@@ -86,7 +86,11 @@ class SettingsViewController: UIViewController {
             do {
                 try firebaseAuth.signOut()
                 self.dismiss(animated: false, completion: nil)
-                self.present(FirstPageViewController(), animated: true, completion: nil)
+                
+                let firstPage = FirstPageViewController(nibName: "FirstPageViewController", bundle: nil)
+                firstPage.modalPresentationStyle = .fullScreen
+                
+                self.present(firstPage, animated: true, completion: nil)
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }

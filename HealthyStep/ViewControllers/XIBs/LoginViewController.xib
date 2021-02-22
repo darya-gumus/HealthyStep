@@ -37,7 +37,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your e-mail" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qy8-TD-4rs">
                     <rect key="frame" x="60" y="199" width="255" height="35"/>
-                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.93369668719999999" green="1" blue="0.98431402440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="wBM-hd-k3N"/>
                     </constraints>
@@ -46,7 +46,7 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LSC-PT-fVm">
                     <rect key="frame" x="60" y="304" width="255" height="35"/>
-                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.93369668719999999" green="1" blue="0.98431402440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="RgH-C3-No5"/>
                     </constraints>

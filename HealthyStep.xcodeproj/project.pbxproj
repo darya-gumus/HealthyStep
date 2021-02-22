@@ -15,7 +15,7 @@
 		926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDEF225CC19B40054345A /* TabBarViewController.swift */; };
 		926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */; };
 		926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8125D6C62A0054345A /* MotionManager.swift */; };
-		926BDF8525D6D13F0054345A /* SaveFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */; };
+		926BDF8525D6D13F0054345A /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8425D6D13F0054345A /* FirestoreManager.swift */; };
 		926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDFC325D92AC90054345A /* TableViewCell.swift */; };
 		926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDFC425D92AC90054345A /* TableViewCell.xib */; };
 		92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */; };
@@ -34,7 +34,6 @@
 		92F0529B258E087B00EC476F /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F05299258E087B00EC476F /* RegistrationViewController.xib */; };
 		92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F0529C258E4E0400EC476F /* LoginViewController.swift */; };
 		92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F0529D258E4E0400EC476F /* LoginViewController.xib */; };
-		92FDC3CC25D95C5A00821E7F /* LoadFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */; };
 		92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,7 @@
 		926BDEF225CC19B40054345A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
 		926BDF8125D6C62A0054345A /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
-		926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFirestoreManager.swift; sourceTree = "<group>"; };
+		926BDF8425D6D13F0054345A /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		926BDFC325D92AC90054345A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		926BDFC425D92AC90054345A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +81,6 @@
 		92F05299258E087B00EC476F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		92F0529C258E4E0400EC476F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		92F0529D258E4E0400EC476F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFirestoreManager.swift; sourceTree = "<group>"; };
 		92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkouDataModel.swift; sourceTree = "<group>"; };
 		A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +128,7 @@
 			children = (
 				926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */,
 				926BDF8125D6C62A0054345A /* MotionManager.swift */,
-				92FDC3D425D95E2C00821E7F /* FirestoreManager */,
+				926BDF8425D6D13F0054345A /* FirestoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -191,15 +189,6 @@
 				92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		92FDC3D425D95E2C00821E7F /* FirestoreManager */ = {
-			isa = PBXGroup;
-			children = (
-				926BDF8425D6D13F0054345A /* SaveFirestoreManager.swift */,
-				92FDC3CB25D95C5A00821E7F /* LoadFirestoreManager.swift */,
-			);
-			path = FirestoreManager;
 			sourceTree = "<group>";
 		};
 		B02635DD70D0183CF4A3E3E5 /* Frameworks */ = {
@@ -363,12 +352,11 @@
 				926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */,
 				9299D80A25923E15000251AD /* MainViewController.swift in Sources */,
 				92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */,
-				92FDC3CC25D95C5A00821E7F /* LoadFirestoreManager.swift in Sources */,
 				926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */,
 				92F0529A258E087B00EC476F /* RegistrationViewController.swift in Sources */,
 				926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */,
 				92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */,
-				926BDF8525D6D13F0054345A /* SaveFirestoreManager.swift in Sources */,
+				926BDF8525D6D13F0054345A /* FirestoreManager.swift in Sources */,
 				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
 				92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
