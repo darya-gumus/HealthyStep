@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
                     let steps = Int(truncating: data.numberOfSteps)
                     let distanceM = Int(truncating: data.distance!)
 
-                    let weightKg = Double(UserSettingsManager.userWeightSettings ?? "60") ?? 60
+                    let weightKg = Double(UserSettingsManager.shared.userWeight ?? "60") ?? 60
                     
                     let kcal = 0.5 * weightKg * Double(distanceM / 1000)
                     let kcalStr = String(format:"%.1f", kcal)

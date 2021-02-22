@@ -95,4 +95,51 @@ class FirestoreManager {
         }
     }
 }
-
+//extension FirestoreManager: SettingsStorage {
+//    var userName: String? {
+//        get {
+//            <#code#>
+//        }
+//        set {
+//            <#code#>
+//        }
+//    }
+//    
+//    var userBirthDate: String? {
+//        get {
+//            <#code#>
+//        }
+//        set {
+//            <#code#>
+//        }
+//    }
+//    
+//    var userGender: Int? {
+//        get {
+//            <#code#>
+//        }
+//        set {
+//            <#code#>
+//        }
+//    }
+//    
+//    var userHeight: String? {
+//        get {
+//            <#code#>
+//        }
+//        set {
+//            <#code#>
+//        }
+//    }
+//    
+//    var userWeight: String? {
+//        get {
+//            <#code#>
+//        }
+//        set {
+//            <#code#>
+//        }
+//    }
+//    
+//    
+//}
