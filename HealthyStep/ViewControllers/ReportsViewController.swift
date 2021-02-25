@@ -22,11 +22,10 @@ class ReportsViewController: UIViewController {
         tableView.delegate = self
         
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        print(workoutData)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        LoadFirestoreManager().loadWorkoutData { [weak self] workouts in
+        FirestoreManager().loadWorkoutData { [weak self] workouts in
             self?.workoutData = workouts
             self?.tableView.reloadData()
         }
@@ -41,13 +40,12 @@ extension ReportsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var workout = workoutData[indexPath.row]
+        let workout = workoutData[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         cell.setWorkout(workout: workout)
         
         return cell
     }
-    
 }
   

@@ -17,6 +17,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
     
+    var settingsHandler: SettingsStorage = UserSettingsManager.shared
+    
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
@@ -24,20 +26,20 @@ class SettingsViewController: UIViewController {
         
         createDatePicker()
         
-        nameTF.text = UserSettingsManager.userNameSettings
-        birthDateTF.text = UserSettingsManager.userBirthDateSettings
-        genderPicker.selectedSegmentIndex = UserSettingsManager.userGenderSettings!
-        heightTF.text = UserSettingsManager.userHeightSettings
-        weightTF.text = UserSettingsManager.userWeightSettings
+        nameTF.text = settingsHandler.userName
+        birthDateTF.text = settingsHandler.userBirthDate
+        genderPicker.selectedSegmentIndex = settingsHandler.userGender!
+        heightTF.text = settingsHandler.userHeight
+        weightTF.text = settingsHandler.userWeight
     }
     
     @IBAction func letsStartPressed(_ sender: Any) {
         
-        UserSettingsManager.userNameSettings = nameTF.text ?? ""
-        UserSettingsManager.userBirthDateSettings = birthDateTF.text ?? ""
-        UserSettingsManager.userGenderSettings = genderPicker.selectedSegmentIndex
-        UserSettingsManager.userHeightSettings = heightTF.text ?? ""
-        UserSettingsManager.userWeightSettings = weightTF.text ?? ""
+        settingsHandler.userName = nameTF.text ?? ""
+        settingsHandler.userBirthDate = birthDateTF.text ?? ""
+        settingsHandler.userGender = genderPicker.selectedSegmentIndex
+        settingsHandler.userHeight = heightTF.text ?? ""
+        settingsHandler.userWeight = weightTF.text ?? ""
 
         let mainPage = TabBarViewController()
         mainPage.modalPresentationStyle = .fullScreen
@@ -86,7 +88,11 @@ class SettingsViewController: UIViewController {
             do {
                 try firebaseAuth.signOut()
                 self.dismiss(animated: false, completion: nil)
-                self.present(FirstPageViewController(), animated: true, completion: nil)
+                
+                let firstPage = FirstPageViewController(nibName: "FirstPageViewController", bundle: nil)
+                firstPage.modalPresentationStyle = .fullScreen
+                
+                self.present(firstPage, animated: true, completion: nil)
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }

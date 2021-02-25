@@ -16,10 +16,22 @@ struct KeyDefaults {
     static let keyWeight = "Weight.settings.key"
 }
 
-class UserSettingsManager {
-    static let userDefaults = UserDefaults.standard
+protocol SettingsStorage {
+    var userName: String? { get set }
+    var userBirthDate: String? { get set }
+    var userGender: Int? { get set }
+    var userHeight: String? { get set }
+    var userWeight: String? { get set }
+}
+
+class UserSettingsManager: SettingsStorage {
     
-    public static var userNameSettings: String? {
+    private init() {}
+    static let shared = UserSettingsManager()
+    
+    let userDefaults = UserDefaults.standard
+    
+    var userName: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyName)
         }
@@ -27,7 +39,7 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyName)
         }
     }
-    public static var userBirthDateSettings: String? {
+    var userBirthDate: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyBirthDate)
         }
@@ -35,7 +47,7 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyBirthDate)
         }
     }
-    public static var userGenderSettings: Int? {
+    var userGender: Int? {
         get {
             userDefaults.integer(forKey: KeyDefaults.keyGender)
         }
@@ -43,7 +55,7 @@ class UserSettingsManager {
             userDefaults.set(newValue, forKey: KeyDefaults.keyGender)
         }
     }
-    public static var userHeightSettings: String? {
+    var userHeight: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyHeight)
         }
@@ -51,7 +63,7 @@ class UserSettingsManager {
             userDefaults.setValue(newValue, forKey: KeyDefaults.keyHeight)
         }
     }
-    public static var userWeightSettings: String? {
+    var userWeight: String? {
         get {
             userDefaults.string(forKey: KeyDefaults.keyWeight)
         }

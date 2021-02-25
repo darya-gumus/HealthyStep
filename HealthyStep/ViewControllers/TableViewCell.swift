@@ -24,9 +24,9 @@ class TableViewCell: UITableViewCell {
         
         dateLabel.text = dateString
         timerLabel.text = workout.timerData
-        stepsLabel.text = workout.stepsData + " steps"
-        distanceLabel.text = workout.distanceData + " km"
-        kcalLabel.text = workout.kcalData + " kcal"
+        stepsLabel.text = workout.stepsData
+        distanceLabel.text = workout.distanceData
+        kcalLabel.text = workout.kcalData
     }
 }
 

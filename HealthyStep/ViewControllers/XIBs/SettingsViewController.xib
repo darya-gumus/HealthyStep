@@ -23,32 +23,32 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Via-gE-3cq">
-                    <rect key="frame" x="50" y="137.5" width="118" height="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Via-gE-3cq">
+                    <rect key="frame" x="50" y="130" width="118" height="25"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                     <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-4w-K5x">
-                    <rect key="frame" x="50" y="207.5" width="68.5" height="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-4w-K5x">
+                    <rect key="frame" x="50" y="200" width="68.5" height="25"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                     <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-8R-0CZ">
-                    <rect key="frame" x="50" y="278.5" width="61.5" height="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-8R-0CZ">
+                    <rect key="frame" x="50" y="271" width="61.5" height="25"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                     <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO4-Kh-rTB">
-                    <rect key="frame" x="50" y="348.5" width="65" height="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO4-Kh-rTB">
+                    <rect key="frame" x="50" y="341" width="65" height="25"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                     <color key="textColor" red="0.070588235294117646" green="0.51764705882352935" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhl-8K-4eH">
-                    <rect key="frame" x="0.0" y="438.5" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="416" width="320" height="44"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
                     <state key="normal" title="Let's Start!">
                         <color key="titleColor" red="0.30980392156862746" green="0.50196078431372548" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -57,46 +57,49 @@
                         <action selector="letsStartPressed:" destination="-1" eventType="touchUpInside" id="Odl-Ba-oLe"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-iu-t7G">
-                    <rect key="frame" x="0.0" y="20" width="320" height="37.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-iu-t7G">
+                    <rect key="frame" x="0.0" y="10" width="320" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="u3f-oG-LYW"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="30"/>
                     <color key="textColor" red="0.21035016910000001" green="0.5" blue="0.40390966589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbI-Lf-wt4">
-                    <rect key="frame" x="50" y="67.5" width="51.5" height="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbI-Lf-wt4">
+                    <rect key="frame" x="50" y="60" width="51.5" height="25"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                     <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Sh4-Ia-42K">
-                    <rect key="frame" x="60" y="97.5" width="200" height="30"/>
-                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="60" y="90" width="200" height="30"/>
+                    <color key="backgroundColor" red="0.94658247507446525" green="1" blue="0.98420519411184482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="TkV-1o-Dwj"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" textContentType="name"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="go" textContentType="name"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-ar-X5m">
-                    <rect key="frame" x="60" y="167.5" width="200" height="30"/>
-                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="60" y="160" width="200" height="30"/>
+                    <color key="backgroundColor" red="0.93369668719999999" green="1" blue="0.98431402440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="pjc-AD-sUf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-i3-zBP">
-                    <rect key="frame" x="60" y="237.5" width="200" height="32"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-i3-zBP">
+                    <rect key="frame" x="60" y="230" width="200" height="32"/>
                     <segments>
                         <segment title="Male"/>
                         <segment title="Female"/>
                     </segments>
                 </segmentedControl>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your height in cm" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DtT-pq-iSt">
-                    <rect key="frame" x="60" y="308.5" width="200" height="30"/>
-                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="60" y="301" width="200" height="30"/>
+                    <color key="backgroundColor" red="0.91812318559999995" green="1" blue="0.98431426290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="MhD-pE-nqF"/>
                     </constraints>
@@ -104,16 +107,16 @@
                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your weight in kg" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-tb-P0c">
-                    <rect key="frame" x="60" y="378.5" width="200" height="30"/>
-                    <color key="backgroundColor" red="0.85882352939999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="60" y="371" width="200" height="30"/>
+                    <color key="backgroundColor" red="0.91812318559999995" green="1" blue="0.98431426290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="HeZ-OB-KF1"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnH-DK-8qj">
-                    <rect key="frame" x="0.0" y="511" width="320" height="37"/>
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnH-DK-8qj">
+                    <rect key="frame" x="0.0" y="516" width="320" height="37"/>
                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                     <state key="normal" title="Sign Out">
                         <color key="titleColor" red="0.30980392159999998" green="0.50196078430000002" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -131,7 +134,6 @@
                 <constraint firstItem="yyA-tb-P0c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="4Yy-Od-sjo"/>
                 <constraint firstItem="SzW-ar-X5m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="9wf-nU-q3B"/>
                 <constraint firstItem="vbI-Lf-wt4" firstAttribute="top" secondItem="bZf-iu-t7G" secondAttribute="bottom" constant="10" id="AbO-YF-m6C"/>
-                <constraint firstItem="wnH-DK-8qj" firstAttribute="trailing" secondItem="zhl-8K-4eH" secondAttribute="trailing" id="Aka-z0-nBt"/>
                 <constraint firstItem="BO4-Kh-rTB" firstAttribute="top" secondItem="DtT-pq-iSt" secondAttribute="bottom" constant="10" id="BUf-mS-bOv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DtT-pq-iSt" secondAttribute="trailing" constant="60" id="Ccl-Mv-wbp"/>
                 <constraint firstItem="Sh4-Ia-42K" firstAttribute="top" secondItem="vbI-Lf-wt4" secondAttribute="bottom" constant="5" id="ChT-Jz-2y3"/>
@@ -139,27 +141,27 @@
                 <constraint firstItem="m3U-8R-0CZ" firstAttribute="top" secondItem="XLN-i3-zBP" secondAttribute="bottom" constant="10" id="Dre-x5-g15"/>
                 <constraint firstItem="Sh4-Ia-42K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="EQa-fg-KrA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sh4-Ia-42K" secondAttribute="trailing" constant="60" id="HHz-zf-CJs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wnH-DK-8qj" secondAttribute="bottom" constant="15" id="IwZ-XM-u4P"/>
                 <constraint firstItem="XLN-i3-zBP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="KJ8-nb-gmL"/>
-                <constraint firstItem="zhl-8K-4eH" firstAttribute="top" secondItem="yyA-tb-P0c" secondAttribute="bottom" constant="30" id="MFx-B8-lnj"/>
+                <constraint firstItem="wnH-DK-8qj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LWz-tA-9ux"/>
                 <constraint firstItem="SzW-ar-X5m" firstAttribute="top" secondItem="Via-gE-3cq" secondAttribute="bottom" constant="5" id="SlR-62-xn7"/>
                 <constraint firstItem="DtT-pq-iSt" firstAttribute="top" secondItem="m3U-8R-0CZ" secondAttribute="bottom" constant="5" id="TNY-bX-G9x"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SzW-ar-X5m" secondAttribute="trailing" constant="60" id="VQX-PM-CPU"/>
                 <constraint firstItem="Via-gE-3cq" firstAttribute="top" secondItem="Sh4-Ia-42K" secondAttribute="bottom" constant="10" id="Xlq-Gv-Fh7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wnH-DK-8qj" secondAttribute="bottom" constant="20" id="Zuw-JR-HfS"/>
-                <constraint firstItem="bZf-iu-t7G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="aps-Sb-tgX"/>
+                <constraint firstItem="bZf-iu-t7G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="aps-Sb-tgX"/>
+                <constraint firstItem="wnH-DK-8qj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="b0Z-eN-Ub3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XLN-i3-zBP" secondAttribute="trailing" constant="60" id="b35-Me-cXI"/>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="top" secondItem="yyA-tb-P0c" secondAttribute="bottom" constant="15" id="caM-E4-pTd"/>
                 <constraint firstItem="vbI-Lf-wt4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="cyU-AJ-jrA"/>
-                <constraint firstItem="wnH-DK-8qj" firstAttribute="top" secondItem="zhl-8K-4eH" secondAttribute="bottom" priority="999" constant="28.5" id="gAc-T0-Yle"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yyA-tb-P0c" secondAttribute="trailing" constant="60" id="gQK-7l-aCd"/>
                 <constraint firstItem="DtT-pq-iSt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="gUB-St-BAN"/>
                 <constraint firstItem="m3U-8R-0CZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="ia6-gu-h3P"/>
                 <constraint firstItem="BO4-Kh-rTB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="loy-cT-sCC"/>
                 <constraint firstItem="ezm-4w-K5x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="lrr-EO-MBa"/>
                 <constraint firstItem="XLN-i3-zBP" firstAttribute="top" secondItem="ezm-4w-K5x" secondAttribute="bottom" constant="5" id="o8f-Ac-1zW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zhl-8K-4eH" secondAttribute="trailing" id="obf-27-mln"/>
-                <constraint firstItem="wnH-DK-8qj" firstAttribute="leading" secondItem="zhl-8K-4eH" secondAttribute="leading" id="qRb-5d-xaN"/>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="q5f-EP-iLi"/>
+                <constraint firstItem="zhl-8K-4eH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ty8-8O-9lZ"/>
                 <constraint firstItem="ezm-4w-K5x" firstAttribute="top" secondItem="SzW-ar-X5m" secondAttribute="bottom" constant="10" id="vVa-Ld-ycZ"/>
-                <constraint firstItem="zhl-8K-4eH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yVl-EG-ZZp"/>
                 <constraint firstItem="yyA-tb-P0c" firstAttribute="top" secondItem="BO4-Kh-rTB" secondAttribute="bottom" constant="5" id="zJm-DJ-6Pn"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>

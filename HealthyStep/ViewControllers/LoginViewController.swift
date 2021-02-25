@@ -29,11 +29,13 @@ class LoginViewController: UIViewController {
         forgotPassAlert.addTextField(configurationHandler: nil)
         forgotPassAlert.textFields![0].placeholder = "Your email"
         
+        forgotPassAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         forgotPassAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             Auth.auth().sendPasswordReset(withEmail: forgotPassAlert.textFields![0].text!) { error in
                 if let _ = error {
                     let alert = UIAlertController(title: "Error", message: "Please, enter correct email!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    
                     self.present(alert, animated: true, completion: nil)
                 } else {
                     let alert = UIAlertController(title: "Success", message: "A password reset email has been sent!", preferredStyle: .alert)

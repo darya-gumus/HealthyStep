@@ -17,12 +17,14 @@ class TabBarViewController: UIViewController {
         let reportsVC = ReportsViewController()
         let mainVC = MainViewController()
         let settingsVC = SettingsViewController()
+        let chartBar = ChartBarViewController()
         
         reportsVC.tabBarItem = UITabBarItem(title: "Reports", image: UIImage(systemName: "book"), tag: 0)
-        mainVC.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "star"), tag: 1)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 2)
+        chartBar.tabBarItem = UITabBarItem(title: "Chart Bar", image: UIImage(systemName: "chart.bar"), tag: 1)
+        mainVC.tabBarItem = UITabBarItem(title: "Main", image: UIImage(systemName: "figure.walk"), tag: 2)
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 3)
         
-        tabBarVC.viewControllers = [ mainVC, reportsVC, settingsVC ]
+        tabBarVC.viewControllers = [ mainVC, reportsVC, chartBar, settingsVC ]
         
         self.view.addSubview(tabBarVC.view)
     }
