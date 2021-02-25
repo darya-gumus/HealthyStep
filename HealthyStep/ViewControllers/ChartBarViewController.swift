@@ -45,8 +45,6 @@ class ChartBarViewController: UIViewController, ChartViewDelegate {
             self?.barChart.rightAxis.enabled = false
             self?.barChart.xAxis.labelPosition = .bottom
            
-//            self?.barChart.zoom(scaleX: 1.5, scaleY: 1, x: 0, y: 0)
-//            self?.barChart.setScaleEnabled(false)
         }
     }
 }

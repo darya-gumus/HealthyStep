@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phd-QJ-8bN">
-                        <rect key="frame" x="40" y="5" width="43.5" height="24"/>
+                        <rect key="frame" x="40" y="5" width="43.666666666666657" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         <color key="textColor" red="0.021408163010000002" green="0.5251494646" blue="0.53726124760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f12-VF-zpa">
-                        <rect key="frame" x="74.5" y="35" width="90" height="21"/>
+                        <rect key="frame" x="74.333333333333329" y="35" width="89.999999999999986" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="90" id="CfD-mo-85Z"/>
                         </constraints>
@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" text="Steps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrj-dg-wkp">
-                        <rect key="frame" x="229.5" y="62" width="100" height="21"/>
+                        <rect key="frame" x="229.33333333333337" y="62" width="100" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="nSz-5g-Lfi"/>
                         </constraints>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="254" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrU-Mx-6nn">
-                        <rect key="frame" x="80" y="62" width="90" height="21"/>
+                        <rect key="frame" x="79.666666666666671" y="62" width="90.000000000000014" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="90" id="p2y-ji-klm"/>
                         </constraints>
@@ -51,31 +51,31 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="254" horizontalCompressionResistancePriority="751" text="Steps:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiH-vK-kR2">
-                        <rect key="frame" x="174" y="61.5" width="50.5" height="22.5"/>
+                        <rect key="frame" x="173.66666666666666" y="61.666666666666664" width="50.666666666666657" height="22.333333333333336"/>
                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                         <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Timer:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0F-jS-OAO">
-                        <rect key="frame" x="15" y="34" width="54.5" height="22.5"/>
+                        <rect key="frame" x="15.000000000000004" y="34" width="54.333333333333343" height="22.333333333333329"/>
                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                         <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meters:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yi-Y7-yMB">
-                        <rect key="frame" x="15" y="61.5" width="60" height="22.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Meters:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yi-Y7-yMB">
+                        <rect key="frame" x="14.999999999999996" y="61.333333333333336" width="59.666666666666657" height="22.666666666666664"/>
                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                         <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kcal:" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsb-zn-dTS">
-                        <rect key="frame" x="174" y="34" width="41" height="22.5"/>
+                        <rect key="frame" x="174" y="34.333333333333336" width="41" height="22.333333333333336"/>
                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                         <color key="textColor" red="0.070588235289999995" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Kcal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHB-Eh-c4I">
-                        <rect key="frame" x="220" y="34.5" width="100" height="21"/>
+                        <rect key="frame" x="220" y="34.666666666666664" width="100" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="Vee-Rn-Wkg"/>
                         </constraints>

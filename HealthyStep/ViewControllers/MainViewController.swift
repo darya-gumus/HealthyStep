@@ -26,7 +26,6 @@ class MainViewController: UIViewController {
     var shouldStartUpdating: Bool = false
     
     var timer = Timer()
-    var timerCounting: Bool = false
     var count = 0
     
     override func viewDidLoad() {
@@ -53,7 +52,7 @@ class MainViewController: UIViewController {
                     let steps = Int(truncating: data.numberOfSteps)
                     let distanceM = Int(truncating: data.distance!)
 
-                    let weightKg = Double(UserSettingsManager.shared.userWeight ?? "60") ?? 60
+                    let weightKg = Double(UserSettingsManager.shared.userWeight ?? "70") ?? 70
                     
                     let kcal = 0.5 * weightKg * Double(distanceM / 1000)
                     let kcalStr = String(format:"%.1f", kcal)
@@ -63,12 +62,10 @@ class MainViewController: UIViewController {
                     self?.kcalCountLabel.text = "\(kcalStr)"
                 } else {
                     self?.stepsCountLabel.text = "Steps are not avalible"
-                    print("Steps are not avalible")
                 }
             }
         }
         
-        timerCounting = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         timerCountLabel.text = makeTimeString(hours: 0, minutes: 0, seconds: 0)
         count = 0
@@ -80,7 +77,6 @@ class MainViewController: UIViewController {
         motionManager.pedometer.stopUpdates()
         motionManager.pedometer.stopEventUpdates()
         
-        timerCounting = false
         timer.invalidate()
     }
     
