@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>166180643136-5g5u9bfma5glgbsaj7dqf5ncd0kvdhee.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.166180643136-5g5u9bfma5glgbsaj7dqf5ncd0kvdhee</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDkmtZ3Lr1Wpic6WoIbbjPlq1qO1oL0T2o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>166180643136</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.daryagumus.HealthyStep</string>
+	<key>PROJECT_ID</key>
+	<string>healthystep-4f856</string>
+	<key>STORAGE_BUCKET</key>
+	<string>healthystep-4f856.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:166180643136:ios:b3c7ae2bfb79d2b0cf5aa5</string>
+</dict>
+</plist>

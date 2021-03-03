@@ -3,27 +3,86 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45814611A8EBE662A1173D47 /* Pods_HealthyStep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */; };
+		924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924DB3A325B962FB004034B5 /* FirstPageViewController.swift */; };
+		924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924DB3A425B962FB004034B5 /* FirstPageViewController.xib */; };
+		926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDED325CB16ED0054345A /* ReportsViewController.swift */; };
+		926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDED425CB16ED0054345A /* ReportsViewController.xib */; };
+		926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDEF225CC19B40054345A /* TabBarViewController.swift */; };
+		926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */; };
+		926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8125D6C62A0054345A /* MotionManager.swift */; };
+		926BDF8525D6D13F0054345A /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDF8425D6D13F0054345A /* FirestoreManager.swift */; };
+		926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926BDFC325D92AC90054345A /* TableViewCell.swift */; };
+		926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926BDFC425D92AC90054345A /* TableViewCell.xib */; };
+		92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */; };
+		92986C1025E00D650078D2D8 /* ChartBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */; };
+		9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80425921FE9000251AD /* SettingsViewController.swift */; };
+		9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80525921FE9000251AD /* SettingsViewController.xib */; };
+		9299D80A25923E15000251AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9299D80825923E15000251AD /* MainViewController.swift */; };
+		9299D80B25923E15000251AD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9299D80925923E15000251AD /* MainViewController.xib */; };
+		9299D81625939FB0000251AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9299D81525939FB0000251AD /* GoogleService-Info.plist */; };
+		92D7B1B325E13ECF0069D2C0 /* StepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */; };
 		92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */; };
 		92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */; };
-		92DFD561258CBDBB0011DC97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DFD560258CBDBB0011DC97 /* ViewController.swift */; };
-		92DFD564258CBDBB0011DC97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DFD562258CBDBB0011DC97 /* Main.storyboard */; };
 		92DFD566258CBDBD0011DC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92DFD565258CBDBD0011DC97 /* Assets.xcassets */; };
 		92DFD569258CBDBD0011DC97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */; };
+		92F0529A258E087B00EC476F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F05298258E087B00EC476F /* RegistrationViewController.swift */; };
+		92F0529B258E087B00EC476F /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F05299258E087B00EC476F /* RegistrationViewController.xib */; };
+		92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F0529C258E4E0400EC476F /* LoginViewController.swift */; };
+		92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F0529D258E4E0400EC476F /* LoginViewController.xib */; };
+		92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		92986C1825E053B00078D2D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.debug.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyStep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		924DB3A325B962FB004034B5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		924DB3A425B962FB004034B5 /* FirstPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstPageViewController.xib; sourceTree = "<group>"; };
+		926BDED325CB16ED0054345A /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		926BDED425CB16ED0054345A /* ReportsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsViewController.xib; sourceTree = "<group>"; };
+		926BDEF225CC19B40054345A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
+		926BDF8125D6C62A0054345A /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		926BDF8425D6D13F0054345A /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		926BDFC325D92AC90054345A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		926BDFC425D92AC90054345A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBarViewController.swift; sourceTree = "<group>"; };
+		92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartBarViewController.xib; sourceTree = "<group>"; };
+		9299D80425921FE9000251AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9299D80525921FE9000251AD /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		9299D80825923E15000251AD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9299D80925923E15000251AD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		9299D81525939FB0000251AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsModel.swift; sourceTree = "<group>"; };
 		92DFD559258CBDBB0011DC97 /* HealthyStep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyStep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92DFD560258CBDBB0011DC97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92DFD563258CBDBB0011DC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92DFD565258CBDBD0011DC97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92DFD568258CBDBD0011DC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92DFD56A258CBDBD0011DC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F05298258E087B00EC476F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		92F05299258E087B00EC476F /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		92F0529C258E4E0400EC476F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		92F0529D258E4E0400EC476F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkouDataModel.swift; sourceTree = "<group>"; };
+		A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyStep.release.xcconfig"; path = "Target Support Files/Pods-HealthyStep/Pods-HealthyStep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +90,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45814611A8EBE662A1173D47 /* Pods_HealthyStep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A16124E9685941A486BC021 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */,
+				A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		924DB34F25AC7F97004034B5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				926BDF8B25D7DD190054345A /* XIBs */,
+				924DB3A325B962FB004034B5 /* FirstPageViewController.swift */,
+				92F05298258E087B00EC476F /* RegistrationViewController.swift */,
+				92F0529C258E4E0400EC476F /* LoginViewController.swift */,
+				926BDEF225CC19B40054345A /* TabBarViewController.swift */,
+				9299D80425921FE9000251AD /* SettingsViewController.swift */,
+				9299D80825923E15000251AD /* MainViewController.swift */,
+				926BDED325CB16ED0054345A /* ReportsViewController.swift */,
+				926BDFC325D92AC90054345A /* TableViewCell.swift */,
+				92986C0D25E00D650078D2D8 /* ChartBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		926BDF8A25D7DCFA0054345A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				926BDF0B25CE8BA40054345A /* UserSettingsManager.swift */,
+				926BDF8125D6C62A0054345A /* MotionManager.swift */,
+				926BDF8425D6D13F0054345A /* FirestoreManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		926BDF8B25D7DD190054345A /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				924DB3A425B962FB004034B5 /* FirstPageViewController.xib */,
+				92F05299258E087B00EC476F /* RegistrationViewController.xib */,
+				92F0529D258E4E0400EC476F /* LoginViewController.xib */,
+				9299D80525921FE9000251AD /* SettingsViewController.xib */,
+				9299D80925923E15000251AD /* MainViewController.xib */,
+				92986C0E25E00D650078D2D8 /* ChartBarViewController.xib */,
+				926BDED425CB16ED0054345A /* ReportsViewController.xib */,
+				926BDFC425D92AC90054345A /* TableViewCell.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		92DFD550258CBDBB0011DC97 = {
 			isa = PBXGroup;
 			children = (
 				92DFD55B258CBDBB0011DC97 /* HealthyStep */,
 				92DFD55A258CBDBB0011DC97 /* Products */,
+				7A16124E9685941A486BC021 /* Pods */,
+				B02635DD70D0183CF4A3E3E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +169,34 @@
 		92DFD55B258CBDBB0011DC97 /* HealthyStep */ = {
 			isa = PBXGroup;
 			children = (
-				92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */,
+				926BDF8A25D7DCFA0054345A /* Managers */,
+				92FDC3D325D95DF700821E7F /* Models */,
+				924DB34F25AC7F97004034B5 /* ViewControllers */,
 				92DFD55E258CBDBB0011DC97 /* SceneDelegate.swift */,
-				92DFD560258CBDBB0011DC97 /* ViewController.swift */,
-				92DFD562258CBDBB0011DC97 /* Main.storyboard */,
+				92DFD55C258CBDBB0011DC97 /* AppDelegate.swift */,
 				92DFD565258CBDBD0011DC97 /* Assets.xcassets */,
-				92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */,
 				92DFD56A258CBDBD0011DC97 /* Info.plist */,
+				9299D81525939FB0000251AD /* GoogleService-Info.plist */,
+				92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */,
 			);
 			path = HealthyStep;
+			sourceTree = "<group>";
+		};
+		92FDC3D325D95DF700821E7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92FDC3D025D95DAC00821E7F /* WorkouDataModel.swift */,
+				92D7B1B225E13ECF0069D2C0 /* StepsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B02635DD70D0183CF4A3E3E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D4253D8F6CC2B89DB960F92 /* Pods_HealthyStep.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +206,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92DFD56D258CBDBD0011DC97 /* Build configuration list for PBXNativeTarget "HealthyStep" */;
 			buildPhases = (
+				9263E681713E12BCE330C261 /* [CP] Check Pods Manifest.lock */,
 				92DFD555258CBDBB0011DC97 /* Sources */,
 				92DFD556258CBDBB0011DC97 /* Frameworks */,
 				92DFD557258CBDBB0011DC97 /* Resources */,
+				924DB3AA25B96A5B004034B5 /* ShellScript */,
+				FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */,
+				92986C1825E053B00078D2D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HealthyStep;
+			packageProductDependencies = (
+			);
 			productName = HealthyStep;
 			productReference = 92DFD559258CBDBB0011DC97 /* HealthyStep.app */;
 			productType = "com.apple.product-type.application";
@@ -94,7 +232,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Darya Gumus";
 				TargetAttributes = {
 					92DFD558258CBDBB0011DC97 = {
@@ -111,6 +249,8 @@
 				Base,
 			);
 			mainGroup = 92DFD550258CBDBB0011DC97;
+			packageReferences = (
+			);
 			productRefGroup = 92DFD55A258CBDBB0011DC97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,36 +265,111 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924DB3A625B962FB004034B5 /* FirstPageViewController.xib in Resources */,
+				92986C1025E00D650078D2D8 /* ChartBarViewController.xib in Resources */,
+				926BDFC625D92AC90054345A /* TableViewCell.xib in Resources */,
+				926BDED625CB16ED0054345A /* ReportsViewController.xib in Resources */,
+				92F0529F258E4E0400EC476F /* LoginViewController.xib in Resources */,
+				9299D81625939FB0000251AD /* GoogleService-Info.plist in Resources */,
+				9299D80B25923E15000251AD /* MainViewController.xib in Resources */,
+				9299D80725921FE9000251AD /* SettingsViewController.xib in Resources */,
 				92DFD569258CBDBD0011DC97 /* LaunchScreen.storyboard in Resources */,
+				92F0529B258E087B00EC476F /* RegistrationViewController.xib in Resources */,
 				92DFD566258CBDBD0011DC97 /* Assets.xcassets in Resources */,
-				92DFD564258CBDBB0011DC97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		924DB3AA25B96A5B004034B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		9263E681713E12BCE330C261 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthyStep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCCA20DEDF25FF2980AD5949 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthyStep/Pods-HealthyStep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthyStep/Pods-HealthyStep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthyStep/Pods-HealthyStep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92DFD555258CBDBB0011DC97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92DFD561258CBDBB0011DC97 /* ViewController.swift in Sources */,
+				926BDFC525D92AC90054345A /* TableViewCell.swift in Sources */,
+				926BDEF425CC19B40054345A /* TabBarViewController.swift in Sources */,
+				9299D80A25923E15000251AD /* MainViewController.swift in Sources */,
 				92DFD55D258CBDBB0011DC97 /* AppDelegate.swift in Sources */,
+				926BDED525CB16ED0054345A /* ReportsViewController.swift in Sources */,
+				92F0529A258E087B00EC476F /* RegistrationViewController.swift in Sources */,
+				926BDF8225D6C62A0054345A /* MotionManager.swift in Sources */,
+				92F0529E258E4E0400EC476F /* LoginViewController.swift in Sources */,
+				926BDF8525D6D13F0054345A /* FirestoreManager.swift in Sources */,
+				924DB3A525B962FB004034B5 /* FirstPageViewController.swift in Sources */,
+				92986C0F25E00D650078D2D8 /* ChartBarViewController.swift in Sources */,
 				92DFD55F258CBDBB0011DC97 /* SceneDelegate.swift in Sources */,
+				9299D80625921FE9000251AD /* SettingsViewController.swift in Sources */,
+				92D7B1B325E13ECF0069D2C0 /* StepsModel.swift in Sources */,
+				92FDC3D125D95DAC00821E7F /* WorkouDataModel.swift in Sources */,
+				926BDF0C25CE8BA40054345A /* UserSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		92DFD562258CBDBB0011DC97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92DFD563258CBDBB0011DC97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92DFD567258CBDBD0011DC97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -192,6 +407,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -216,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,6 +468,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,9 +499,12 @@
 		};
 		92DFD56E258CBDBD0011DC97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE1A7FA07458D666FFDD0E7 /* Pods-HealthyStep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = K4YRK942R3;
 				INFOPLIST_FILE = HealthyStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,8 +520,11 @@
 		};
 		92DFD56F258CBDBD0011DC97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4AFD28D66C6EA62D19CC268 /* Pods-HealthyStep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4YRK942R3;
 				INFOPLIST_FILE = HealthyStep/Info.plist;
@@ -311,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daryagumus.HealthyStep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
